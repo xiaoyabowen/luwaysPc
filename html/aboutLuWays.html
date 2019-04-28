@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<!--[if lte IE 9]>
+		<script src="https://cdn.bootcss.com/html5shiv/3.6/html5shiv.min.js"></script>
+		<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+		<![endif]-->
+
+		<!--[if lte IE 8]>
+	    <div class="text-xs-center m-b-0 bg-blue-grey-100 alert">
+	        <button type="button" class="close" aria-label="Close" data-dismiss="alert">
+	            <span aria-hidden="true">×</span>
+	        </button>
+	        	你正在使用一个 <strong>过时</strong> 的浏览器。请 <a href=https://browsehappy.com/ target=_blank style="color:#FF9600;">升级您的浏览器</a>，以提高您的体验。
+	    </div>
+	    <![endif]-->
+		<!--网页logo-->
+		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/platform.css" />
+		<link rel="stylesheet" type="text/css" href="../css/swiper.css" />
+		<script src="../js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<!--头部-->
+		<!--<div class="bodyHeader">
+			<div class="subBodyHeader cssFlex headerSubCommon">
+				<div class="comNavLogo">
+					<a href="../index.html"><img src="../images/nav_logo.png" id="logoImg" /></a>
+				</div>
+				<div class="bodyNav cssFlex">
+					<p class="cssFlex">
+						<a href="">登陆</a> |
+						<a href="">注册</a>
+					</p>
+					<a href="" class="bodyNavPhone">010-8562 8831</a>
+					<a href="">帮助</a>
+				</div>
+			</div>
+		</div>
+-->
+		<!--平台服务-->
+
+		<!--平台服务  tab-->
+		<div class="platForm">
+			<ul class="cssFlex">
+				<li class="myOrderALLHoverUp">
+					<a class="bussFeacther">
+						业务介绍
+						<div>
+							<p class="bussntro">关于业务</p>
+							<p class="busServer">服务内容</p>
+							<p class="busCooper">合作方式</p>
+						</div>
+					</a>
+
+				</li>
+				<li class="myOrderALLHoverUp">
+					<a class="platFormFeacther">
+						平台特色
+						<div>
+							<p class="platformFeatures">商家平台</p>
+							<p class="platformAPI">标准API</p>
+						</div>
+					</a>
+
+				</li>
+				<li class="myOrderALLHoverUp  platFormTabActiveUp">
+					<a class="platFormTabActive">关于路途
+						<div>
+							<p class="aboutLuWays fontColorActive">关于路途</p>
+							<p class="aboutLuCooperation">合作伙伴</p>
+							<p class="aboutLuContact">联系我们</p>
+							<p class="aboutLuServer">服务条款</p>
+							<p class="aboutLuUser">用户协议</p>
+							<p class="aboutLuOur">我们的资质</p>
+							<p class="aboutLuBig">大事件</p>
+
+						</div>
+					</a>
+
+				</li>
+				<li class="myOrderALLHoverUp">
+					<a>帮助中心
+						<div>
+							<p class="helpPay">结算周期</p>
+							<p class="helpComput">支付方式</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="headerSubBox">
+			<div class="platFormAll headerSubCommon">
+				<p class="featuresText featuresTextBto">路途网（www.luways.com）属于北京路途科技有限公司，成立于2015年，专注于境外目的地自由行产品，整合当地优质的旅游产品资源，向国内用户提供预订和分销服务，我们在国内拥有独立的销售平台和强大的会员销售渠道，和多家渠道商建立了有效的分销合作关系并持续增长中，我们提供了门票、主题活动、当地特色玩乐、当地自由行线路、餐饮、交通、wifi和签证等各种丰富的产品类型。</p>
+				<p class="featuresText featuresTextBto">在产品价格和质量方面我们拥有得天独厚的优势，通过技术对接，我们获得了目前国内最好的海外预定权益及相关政策，在价格及用户体验方面，远远领先于国内大多数海外预定平台。同时我们秉承公平、公开、共享、共赢的精神，向渠道商提供分销API接口服务，实现产品资源、库存、价格的实时同步，向渠道用户开放路途的产品预定及相关库存、财务、客服等工作。</p>
+				<p class="featuresText">路途致力于整合境外当地的优势特色资源，打造最专业的境外目的地自由行旅游产品平台，为商家用户提供最完善的预订和分销服务，实现利益最大化、追求共赢！</p>
+			</div>
+
+
+		</div>
+		<script src="../js/swiper.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/aboutLuway.js" type="text/javascript" charset="utf-8"></script>
+		<!--自定义滚动条插件-->
+		<script src="../js/scroll.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			var swiper = new Swiper('.swiper-container', {
+				direction: 'horizontal',
+				autoplay: 3000,
+				speed: 300,
+				loop: true,
+				paginationClickable: true,
+				pagination: '.swiper-pagination'
+
+			});
+		</script>
+	</body>
+
+</html>

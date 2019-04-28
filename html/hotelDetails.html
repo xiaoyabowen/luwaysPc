@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>路途-专注于境外目的地产品</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<!--[if lte IE 9]>
+		<script src="https://cdn.bootcss.com/html5shiv/3.6/html5shiv.min.js"></script>
+		<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+		<![endif]-->
+
+		<!--[if lte IE 8]>
+	    <div class="text-xs-center m-b-0 bg-blue-grey-100 alert">
+	        <button type="button" class="close" aria-label="Close" data-dismiss="alert">
+	            <span aria-hidden="true">×</span>
+	        </button>
+	        	你正在使用一个 <strong>过时</strong> 的浏览器。请 <a href=https://browsehappy.com/ target=_blank style="color:#FF9600;">升级您的浏览器</a>，以提高您的体验。
+	    </div>
+	    <![endif]-->
+		<!--网页logo-->
+		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/hotel.css" />
+		<link rel="stylesheet" type="text/css" href="../css/swiper.css"/>
+		<script src="../js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.hotelTab>li.hotelTabImgO>a:after{
+
+				width: 100%!important;
+
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--初始tab  酒店 全部信息-->
+		<div class="hotelContent headerSubCommon">
+			<ul class="hotelTab cssFlex">
+				<li class="hotelTabImgO"><a href="hotel.html">酒店</a></li>
+				<li class="hotelTabImgT"><a href="ticket.html">当地玩乐</a></li>
+				<!--<li class="hotelTabImgTh"><a href="">当地玩乐</a></li>-->
+			</ul>
+			<!--面包屑导航-->
+			<div class="hotelNavBread">
+				您在这里：<a href="../index.html">首页</a>&nbsp;>&nbsp;<a href="../html/hotel.html">酒店</a>&nbsp;>&nbsp;<span class="hotelNavBreadTitle"></span>
+			</div>
+			<!--目的地-->
+			<div class="hotelDestination cssFlex">
+				<span>目的地</span>
+				<div class="hotelDestinationInput hotelDestinationInputList">
+					<input type="text" name="hotelDestinationInput" id="hotelDestinatinInput" readonly value="" placeholder="曼谷艾塔斯酒店式公寓" />
+				</div>
+				<span>国籍</span>
+				<div class="hotelDestinationInput">
+					<input type="text" name="" id="hotelNationalityInput" readonly value="中国" placeholder="" />
+				</div>
+
+				<span>入住时间</span>
+				<div class="hotelDestinationInput">
+					<input type="text" name="hotelCheckInDate" id="hotelCheckInDate" value="" placeholder="2018-07-02" />
+					<!--<span id="caledarFateWeek">周一</span>-->
+					<img src="../images/icon/search_hotel_icon_calendar.png" id="caledarFateImg" alt="日期表" />
+				</div>
+				<span>--</span>
+				<div class="hotelDestinationInput">
+					<input type="text" name="hotelCheckOutDate" id="hotelCheckOutDate" value="" placeholder="2018-07-02" />
+					<!--<span id="caledarFateWeek">周一</span>-->
+					<img src="../images/icon/search_hotel_icon_calendar.png" id="caledarFateImg" alt="日期表" />
+				</div>
+			</div>
+			<!--入住的人数-->
+			<div class="hotelCheckPeople cssFlex">
+				<span>成人</span>
+				<div class="hotelDestinationInput">
+					<input type="text" name="hotelCheckPeopleNum" id="hotelCheckPeopleNum" value="2" />
+					<img src="../images/icon/content_search_nationality_arrow.png" id="arrowUp" alt="下拉箭头" onclick="showAdhotel('sub')" />
+					<img src="../images/icon/content_search_nationality_arrow.png" id="arrowOut" alt="下拉箭头" onclick="showAdhotel('sum')" />
+				</div>
+				<span>儿童</span>
+				<div class="hotelDestinationInput">
+					<input type="text" name="hotelCheckPeopleNum" id="hotelCheckPeopleNumChil" value="0" />
+					<input type="hidden" class="agesNum">
+					<img src="../images/icon/content_search_nationality_arrow.png" id="arrowUp" alt="下拉箭头" onclick="showAdchil('sub')" />
+					<img src="../images/icon/content_search_nationality_arrow.png" id="arrowOut" alt="下拉箭头" onclick="showAdchil('sum')" />
+				</div>
+				<div class="childrenAges">
+
+				</div>
+				<span>房间</span>
+				<div class="hotelDestinationInput">
+					<input type="text" name="hotelCheckPeopleRoom" id="hotelCheckPeopleRoom" placeholder="一间" readonly class="addNumInputCommon" maxlength="3" onkeyup="value=value.replace(/[^\d]/g,'')" value="" />
+					<img src="../images/icon/content_search_nationality_arrow.png" id="arrowUp" alt="下拉箭头" onclick="showRoom('sub')"  />
+					<img src="../images/icon/content_search_nationality_arrow.png" id="arrowOut" alt="下拉箭头"  onclick="showRoom('sum')"/>
+				</div>
+				<button class="hotelCheckPeopleSerch hotelDetailSearch"></button>
+			</div>
+
+			<!--房间详细信息-->
+			<div class="hotelHomeDetails cssFlex">
+				<div class="swiper-container" id="swiper-container1" >
+					  <div class="swiper-wrapper">
+					    <div class="swiper-slide">
+					    	<div class="hotelHomeDetailsImg">
+								<img src="../images/new_hotel_img.png" alt="酒店详情" class="hotelDetailImg" />
+								<img src="../images/icon/threeJ.png" id="otelHomeDetailsthreeJ" alt="三角" />
+								<div class="SeeMoreImgBtn">酒店更多图片</div>
+							</div>
+					    </div>
+					  </div>
+					   <div class="swiper-pagination"></div>
+				</div>
+				<div class="swiper-container" id="swiper-container2">
+					  <div class="swiper-wrapper">
+
+
+						    <div class="swiper-slide">
+								<div class="hotelHomeDetailsContent">
+									<h4></h4>
+									<p style="margin-bottom: 15px;" class="hotelStarimg">星级：
+										<!--<img src="../images/icon/content_hotel_icon_grade.png" id="gradeStar" alt="星级" />
+										<img src="../images/icon/content_hotel_icon_grade.png" id="gradeStar" alt="星级" />
+										<img src="../images/icon/content_hotel_icon_grade.png" id="gradeStar" alt="星级" />-->
+									</p>
+									<p style="margin-bottom: 30px;" class="hotelAdress"></p>
+									<p style="line-height: 28px;width: 100%;" class="hotelStarimgSubTitle textOverflow">
+										<!--这间城市酒店致力于坚持酒店行业的最高标准。 宾客可以得到完美的接待，客房散发出独特的风格。 相比大多数城市酒店，这间酒店拥有更为亲和的气氛，是希望感受优质服务、安全性与奢华感的宾客的理想之选。 空调大堂的咖啡馆和餐厅欢迎宾客到来，酒店还为商务人士配备会议设施。 公共区域提供无线网络，开车前来的宾客还可以使用停车场。 酒店拥有宽敞典雅的客房，配备现代风格的家具，营造出温馨的氛围。-->
+									</p>
+								</div>
+							</div>
+					    </div>
+					  </div>
+			</div>
+
+			<!--房型-->
+			<p class="hotelShowAllMapHot">房型</p>
+			<p class="hotelShowAllMapHotNull"></p>
+			<!--酒店展示-->
+			<div class="hotelShowAll cssFlex">
+				<!--房型详情-->
+				<div class="hotelShowAllPageHouse">
+					<!--房型預定表格-->
+
+					<div class="tableHomeRoom">
+
+					</div>
+
+
+					<!--===============设施与服务-->
+					<p class="hotelShowAllMapHot hideHotelShow">设施与服务</p>
+					<!--上网服务-->
+					<div class="serverInternetBox">
+						<h5 class="serverH5" style="background: url(../images/icon/services_icon_network.png) no-repeat 5px center;background-size: 16px 15px;">房间设施</h5>
+						<div class="serverInternet serverCommon">
+							<!--<span>房内免费无线网络</span>
+							<span>公共区域免费无线网络</span>
+							<span>房内免费无线网络</span>
+							<span>公共区域免费无线网络</span>
+							<span>房内免费无线网络</span>
+							<span>公共区域免费无线网络</span>-->
+						</div>
+					</div>
+					<!--交通出行-->
+					<div class="serverTrafficBox">
+						<h5 class="TrafficH5" style="background: url(../images/icon/services_icon_car.png) no-repeat 5px center;background-size: 19px 15px;">酒店类型</h5>
+						<div class="serverTraffic serverCommon cssFlex">
+							<!--<span>代客泊车</span>
+							<span>酒店/机场接送服务</span>-->
+						</div>
+					</div>
+					<!--休闲娱乐-->
+					<h5 class="LeisureH5" style="background: url(../images/icon/services_icon_basil.png) no-repeat 5px center;background-size: 14px 17px;">休闲娱乐</h5>
+					<div class="serverLeisure serverCommon cssFlex">
+						<!--<span>旅游服务</span>
+						<span>酒店/机场接送服务</span>-->
+					</div>
+					<!--餐饮服务-->
+					<h5 class="LeiMealH5" style="background: url(../images/icon/services_icon_food.png) no-repeat 5px center;background-size: 18px 13px;">餐饮服务</h5>
+					<div class="serverLeiMeal serverCommon cssFlex">
+						<!--<span>餐饮服务</span>
+						<span>酒店/机场接送服务</span>-->
+					</div>
+					<!--便利服务与设施-->
+					<h5 class="LeiServerH5" style="background: url(../images/icon/services_icon_facilities.png) no-repeat 5px center;background-size: 15px 17px;">便利服务与设施</h5>
+					<div class="serverLeiServer serverCommon cssFlex">
+						<!--<span>便利服务与设施</span>
+						<span>酒店/机场接送服务</span>-->
+					</div>
+					<!--其他设施服务-->
+					<h5 class="LeisureQiH5" style="background: url(../images/icon/services_icon_other.png) no-repeat 5px center;background-size: 18px 21px;">其他设施服务</h5>
+					<div class="serverLeisureQi serverCommon cssFlex" style="margin-bottom: 20px;">
+						<!--<span>其他设施服务</span>
+						<span>酒店/机场接送服务</span>-->
+					</div>
+					<!--==========================酒店政策=================================-->
+					<!--<p class="hotelShowAllMapHot">酒店政策</p>
+					<div class="hotelPolicy cssFlex">
+						<span class="hotelPolicyWeight">入住/退房时间:</span>
+						<span>从14:00时-12:00之前</span>
+					</div>
+					<div class="hotelPolicy cssFlex">
+						<span class="hotelPolicyWeight">取消/预付政策:</span>
+						<span>不同类型的客房附带不同的取消预订和预先付费政策 选择上述客房时，
+请参阅客房条款。</span>
+					</div>
+					<div class="hotelPolicy cssFlex">
+						<span class="hotelPolicyWeight">儿童加床:</span>
+						<ul>
+							<li><span class="hotelPolicyBlack"></span>允许1名12岁以下的儿童，使用现有床铺免费。  </li>
+							<li><span class="hotelPolicyBlack"></span>允许1名12岁以下的儿童，使用现有床铺免费。  </li>
+							<li><span class="hotelPolicyBlack"></span>允许1名12岁以下的儿童，使用现有床铺免费。  </li>
+							<li><span class="hotelPolicyBlack"></span>允许1名12岁以下的儿童，使用现有床铺免费。  </li>
+						</ul>
+					</div>
+					<div class="hotelPolicy cssFlex">
+						<span class="hotelPolicyWeight">宠物:</span>
+						<span>不允许携带宠物入住</span>
+					</div>
+					<div class="hotelPolicy cssFlex">
+						<span class="hotelPolicyWeight">团体:</span>
+						<span>如果预订客房数超过9间，住宿方将采用不同的政策和额外补充规定 。</span>
+					</div>-->
+				</div>
+				<div class="hotelShowAllMap">
+					<!--地图定位-->
+					<div class="hotelShowAllMapPosition" id="googleMap">
+						<!--<img src="../images/map.png"/>-->
+					</div>
+					<!--热门酒店-->
+					<!--<p class="hotelShowAllMapHot">热门酒店</p>
+					<ul class="hotelShowAllMapHotNew">
+						<li>
+							<div class="hotelShowAllMapImg">
+								<img src="../images/new_hotel_img.png" alt="热门酒店"/>
+							</div>
+							<h4>艾塔斯酒店</h4>
+							<p>房间类型：BB/RO</p>
+							<p class="hotelShowAllMapHotPrice">¥558.88起</p>
+						</li>
+					</ul>-->
+				</div>
+			</div>
+		</div>
+
+		<!--查看更多图片-->
+		<div class="msg"></div>
+		<div class="pc-slide clearfix">
+			<div class="view">
+				<div class="swiper-container swiper-contant-main">
+					<a class="arrow-left" href="#">
+						<img src="../images/icon/index_tab_l.png" alt="slide 左箭头">
+					</a>
+					<a class="arrow-right" href="#">
+						<img src="../images/icon/index_tab_r.png" alt="slide 右箭头">
+					</a>
+					<div class="swiper-wrapper swiper-wrapper-left">
+						<!--<div class="swiper-slide">
+							<a target="_blank"><img src="../images/images/b6.jpg" alt=""></a>
+						</div>-->
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			<div class="preview">
+				<!--<a class="arrow-left" href="#"></a>
+				<a class="arrow-right" href="#"></a>-->
+				<div class="swiper-container overflowHiden">
+					<p class="hotelShowAllMapHot slideImg">酒店图片</p>
+					<div class="closeImg">
+						<img src="../images/icon/moreCloseBtn.png" alt="">
+					</div>
+					<div class="swiper-wrapper  swiper-wrapperASuto clearfix">
+						<!--<div class="swiper-slide swiper-slide-visible">
+							<img src="../images/images/s1.jpg" alt="">
+						</div>-->
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<script src="../js/ajax.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="http://ditu.google.cn/maps/api/js?key=AIzaSyC7heZZEeL7U1dYsUW9AJgFIKwXrGeuuFA&callback=myMap"></script>-->
+		<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=WP263j3sgyOeMZCWA8luf4Q8VSTsQ6AN"></script>
+		<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/hotelDetail.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/project.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/laydate/laydate.js" type="text/javascript" charset="utf-8"></script>
+<!--自定义滚动条插件-->
+		<script src="../js/scroll.js" type="text/javascript" charset="utf-8"></script>
+
+
+		<script type="text/javascript">
+
+
+
+			//日期选择器
+			$(function(){
+//				入住時間
+				laydate.render({
+					elem: '#hotelCheckInDate',
+					min: -7,
+					max : 30,  // 最大日期
+					showBottom: false,
+					calendar: true,
+					theme: '#ff9600'
+				});
+//				退房时间
+				laydate.render({
+					elem: '#hotelCheckOutDate',
+					min: -7,
+					max : 30,  // 最大日期
+					showBottom: false,
+					calendar: true,
+					theme: '#ff9600'
+				});
+			})
+
+            /*// 酒店  详情 热门酒店
+            myAjax(getHotelJson,param , handle)
+            function handle(data, param) {
+                console.log(data)
+                var hotelAllMapHotNew = ''
+                for (var i = 0; i<data.data.length; i++){
+                    hotelAllMapHotNew += '<li>\n' +
+                        '\t\t\t\t\t\t\t<div class="hotelShowAllMapImg">\n' +
+                        '\t\t\t\t\t\t\t\t<img src="'+serverUrlImg+''+data.data[i].thumbnailUrl+'" alt="热门酒店"/>\n' +
+                        '\t\t\t\t\t\t\t</div>\n' +
+                        '\t\t\t\t\t\t\t\n' +
+                        '\t\t\t\t\t\t\t<h4>'+data.data[i].cnName+'</h4>\n' +
+                        // '\t\t\t\t\t\t\t<p>'+data.data[i].shortDescription+'</p>\n' +
+                        '\t\t\t\t\t\t\t<p class="hotelShowAllMapHotPrice">¥ '+data.data[i].minRate+' 起</p>\n' +
+                        '\t\t\t\t\t\t</li>'
+                }
+                $(".hotelShowAllMapHotNew").html(hotelAllMapHotNew)
+            }
+*/
+            $(".keywords_list").niceScroll({
+                cursorcolor: "#ff9600", // 改变滚动条颜色，使用16进制颜色值
+                cursoropacitymax: 1, // 当滚动条是显示状态时改变透明度, 值范围 1 到 0
+                cursorborder: "none", // CSS方式定义滚动条边框
+                autohidemode: true, // 隐藏滚动条的方式, 可用的值:
+                background: "transparent", // 轨道的背景颜色
+                scrollspeed: 60, // 滚动速度
+                cursorwidth: "8px", // 滚动条的宽度，单位：便素
+                mousescrollstep: 20, // 鼠标滚轮的滚动速度 (像素)
+                cursorminheight: 10, // 设置滚动条的最小高度 (像素)
+                preventmultitouchscrolling: true // 防止多触点事件引发滚动
+            })
+
+            /*$(".swiper-wrapperASuto").niceScroll({
+                cursorcolor: "#ff9600", // 改变滚动条颜色，使用16进制颜色值
+                cursoropacitymax: 1, // 当滚动条是显示状态时改变透明度, 值范围 1 到 0
+                cursorborder: "none", // CSS方式定义滚动条边框
+                autohidemode: true, // 隐藏滚动条的方式, 可用的值:
+                background: "transparent", // 轨道的背景颜色
+                scrollspeed: 60, // 滚动速度
+                mousescrollstep: 20, // 鼠标滚轮的滚动速度 (像素)
+                cursorminheight: 10, // 设置滚动条的最小高度 (像素)
+                preventmultitouchscrolling: false // 防止多触点事件引发滚动
+            })
+*/
+            // 不可预订
+            $(document).on("hover",".notHotelUp",function () {
+                console.log(1)
+                $(".notHotelUpMain").stop().fadeIn()
+            },function () {
+                $(".notHotelUpMain").stop().fadeOut()
+            })
+
+           /* $(".notHotelUp").click(function () {
+                console.log(1)
+            })
+			*/
+
+
+            // 详情查看更多图片  swiper   js
+
+
+            $(".SeeMoreImgBtn").click(function () {
+
+				$(".pc-slide").show()
+				$(".msg").show()
+                var viewSwiper = new Swiper('.view .swiper-container', {
+                    observer:true,
+                    observeParents:true,
+
+                    onSlideChangeStart: function() {
+                        updateNavPosition();
+                    }
+                })
+
+                $('.view .arrow-left,.preview .arrow-left').on('click', function(e) {
+                    e.preventDefault();
+                    if(viewSwiper.activeIndex == 0) {
+                        viewSwiper.swipeTo(viewSwiper.slides.length - 1, 1000);
+                        return;
+                    }
+                    viewSwiper.swipePrev();
+                })
+                $('.view .arrow-right,.preview .arrow-right').on('click', function(e) {
+                    e.preventDefault();
+                    if(viewSwiper.activeIndex == viewSwiper.slides.length - 1) {
+                        viewSwiper.swipeTo(0, 1000);
+                        return
+                    }
+                    viewSwiper.swipeNext();
+                })
+
+                var previewSwiper = new Swiper('.preview .swiper-container', {
+                    observer:true,
+                    observeParents:true,
+                    visibilityFullFit: true,
+                    slidesPerView: 'auto',
+                    onlyExternal: true,
+                    onSlideClick: function() {
+                        viewSwiper.swipeTo(previewSwiper.clickedSlideIndex);
+                    }
+                })
+
+                $(".swiper-slide").click(function(){
+                    $(".swiper-wrapperASuto").addClass("cssAdd")
+                })
+
+                function updateNavPosition() {
+                    $('.preview .active-nav').removeClass('active-nav');
+                    var activeNav = $('.preview .swiper-slide').eq(viewSwiper.activeIndex).addClass('active-nav');
+                    if(!activeNav.hasClass('swiper-slide-visible')) {
+                        if(activeNav.index() > previewSwiper.activeIndex) {
+                            var thumbsPerNav = Math.floor(previewSwiper.width / activeNav.width()) - 1;
+                            previewSwiper.swipeTo(activeNav.index() - thumbsPerNav);
+                        } else {
+                            previewSwiper.swipeTo(activeNav.index());
+                        }
+                    }
+                }
+
+            })
+
+            $(".closeImg").click(function () {
+                $(".pc-slide").hide()
+                $(".msg").hide()
+            })
+            $(".msg").click(function () {
+                $(this).hide()
+                $(".pc-slide").hide()
+            })
+		</script>
+	
+	</body>
+
+</html>

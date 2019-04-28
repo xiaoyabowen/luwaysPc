@@ -1,0 +1,2184 @@
+/*     -=========================登陆注册页样式结构*/
+
+.header {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background: rgba(255, 150, 0, 1);
+}
+
+.headerSub {
+	display: flex;
+	justify-content: center;
+	align-6content: center;
+}
+
+
+/*网站logo*/
+/*
+.notLoginNav>a>span{
+	font-size: 18px;
+}
+*/
+
+.navLogo {
+	width: 138px;
+	flex: 1;
+	margin: 5px 0 6px 0;
+}
+
+.navLogo>a img {
+	display: block;
+	height: 29px;
+	width: 138px;
+}
+
+
+/*登陆注册按钮*/
+
+.login {
+	flex: 1;
+	text-align: right;
+}
+
+.login>a {
+	display: inline-block;
+	padding: 0 11px;
+	font-size: 16px;
+	color: rgba(255, 255, 255, 1);
+}
+
+
+/*登陆注册表单验证dom*/
+
+.loginForm {
+	width: 480px;
+	margin: 130px auto 0;
+	color: #FF9600;
+	font-size: 40px;
+}
+
+.loginForm>h3 {
+	margin-bottom: 56px;
+}
+
+.loginForm>p {
+	margin: 0 0 32px 0;
+	height: 51px;
+	border-radius: 4px;
+	position: relative;
+}
+
+.loginForm>p>input {
+	display: block;
+	width: 462px;
+	border-radius: 4px;
+	height: 51px;
+	border: 1px solid #AAAAAA;
+	line-height: 54px;
+	padding: 0 8px;
+	font-size: 18px;
+	color: #333;
+}
+
+.errorToast {
+	display: block;
+	font-size: 16px;
+	color: #FF2E1E;
+	padding: 0 0 0px 10px;
+	height: 54px;
+}
+
+
+/*密码显示隐藏查看*/
+
+#landEyeClick {
+	display: inline-block;
+	width: 20px;
+	height: 16px;
+	position: absolute;
+	right: 10px;
+	top: 20px;
+	cursor: pointer;
+}
+
+
+/*找回密码/立即注册*/
+
+.returnPass,
+.register {
+	display: block;
+	font-size: 14px;
+	height: 20px;
+	line-height: 20px;
+	width: 60px;
+	float: right;
+	color: #999;
+	padding: 10px 10px 0 0;
+}
+
+.register {
+	color: #FF9600;
+}
+
+
+/*登陆按钮样式*/
+
+#sign,
+#signResiter {
+	width: 480px;
+	height: 54px;
+	line-height: 54px;
+	background: rgba(255, 150, 0, 1);
+	border-radius: 4px;
+	color: #fff;
+	font-size: 22px;
+	cursor: pointer;
+}
+
+#ichecksImg {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border: 1px solid #999;
+	border-radius: 2px;
+	margin-right: 6px;
+}
+.ichecksImgPosi{
+	display: inline-block;
+	margin: -2px 0 0 -20px;
+	width: 18px;
+	height: 16px;
+}
+.icheckFontMain {
+	font-size: 14px;
+	line-height: 12px;
+	vertical-align: center;
+	display: flex;
+}
+
+
+/*登陆注册尾部*/
+
+.loginFooterFont,
+.loginFooterFontFixed {
+	width: 100%;
+	font-size: 14px;
+	color: #B1B1B1;
+	text-align: center;
+}
+
+.loginFooterFont {
+	/*margin-top: 100px;*/
+	margin: 100px auto 40px;
+}
+
+.loginFooterFontFixed {
+	position: fixed;
+	bottom: 40px;
+}
+
+
+/*注册成功页面*/
+
+.loginContentCommon>img {
+	width: 260px;
+	height: 272px;
+	display: block;
+	margin: 0 auto 60px;
+}
+
+.loginContentCommon>p {
+	text-align: center;
+	color: #666666;
+	font-size: 14px;
+	line-height: 28px;
+}
+
+
+/*注册认证信息*/
+
+.resierForm {
+	width: 480px;
+	margin: 0 auto;
+}
+
+#test_form>h3 {
+	line-height: 150px;
+	color: #FF9600;
+	font-size: 26px;
+}
+
+#test_form>h4 {
+	margin-bottom: 18px;
+	font-size: 18px;
+	color: #333333;
+}
+
+.resierForm p {
+	margin: 0 0 32px 0;
+	height: 51px;
+	border-radius: 4px;
+	position: relative;
+}
+
+.resierForm p>input {
+	display: block;
+	width: 460px;
+	border: 1px solid #AAAAAA;
+	border-radius: 4px;
+	height: 51px;
+	line-height: 51px;
+	padding: 0 8px;
+	font-size: 18px;
+	color: #333;
+}
+
+.informationTextarea {
+	margin: 0 0 32px 0;
+	position: relative;
+	width: 771px;
+	display: flex;
+}
+
+.informationTextarea>label {
+	width: 74px;
+	margin-right: 10px;
+}
+
+
+/*文本框*/
+
+#operation {
+	width: 771px;
+	height: 72px;
+	border: 1px solid rgba(222, 222, 222, 1);
+	border-radius: 6px;
+	resize: none;
+	padding: 10px;
+}
+
+
+/*文本框限制字数*/
+
+#limitedNum {
+	display: inline-block;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	color: #999;
+}
+
+#resiterSign {
+	margin-top: 20px;
+	width: 480px;
+	height: 54px;
+	line-height: 54px;
+	background: rgba(255, 150, 0, 1);
+	border-radius: 4px;
+	color: #fff;
+	font-size: 22px;
+	cursor: pointer;
+}
+
+#showTextNum,
+#overTextNum {
+	color: #999;
+}
+
+
+/*输入正确的手机号之后显示对勾图片*/
+
+.userNameTrue,
+.userPhoneTrue,
+.userEmailTrue,
+.companyNameTrue,
+.companyUrlTrue,
+.companyAdressTrue,
+.userPassTrue,
+.userPassConfirmTrue {
+	width: 17px;
+	height: 17px;
+	display: none;
+	position: absolute;
+	right: -30px;
+	margin-top: -38px;
+}
+
+
+/*输入错误显示红色字体*/
+
+#judgeUserName,
+#judgePhone,
+#judgeEmail,
+#judgeCompanyName,
+#judgeUrl,
+#judgeAdress,
+#judgeuserPass,
+#judgeuserPassConfirm {
+	display: block;
+	position: absolute;
+	left: 518px;
+	top: 6px;
+	color: #D71E07;
+	font-size: 12px;
+	width: 240px;
+	height: 38px;
+	line-height: 38px;
+}
+
+.del-userName,
+.del-userPhone,
+.del-userEmail,
+.del-companyName,
+.del-companyUrl,
+.del-companyAdress,
+.del-userPass,
+.del-userPassConfirm {
+	width: 17px;
+	height: 17px;
+	display: none;
+	position: absolute;
+	right: -30px;
+	margin-top: -38px;
+}
+
+
+/*============================================未登录页面样式-========================*/
+
+.notLoginHeader {
+	width: 100%;
+}
+
+.subNotLoginHeader {
+	display: flex;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 9;
+}
+
+#notLoginBg {
+	display: block;
+	width: 100%;
+	height: 720px;
+}
+#bannerFont{
+	display: block;
+	width: 621px;
+	height: 156px;
+	margin: 0 auto;
+}
+
+.notLoginNavA{
+	position: relative;
+}
+.notLoginNavPup{
+	display: none;
+	position: absolute;
+	left: 16px;
+	top: 100px;
+	width: 86px;
+	background:rgba(255,255,255,1);
+	box-shadow:0px 10px 24px rgba(222,222,222,0.48);
+}
+.notLoginNavPup:after{
+	content: '';
+	display: block;
+	position: absolute;
+	width:0;
+    height:0;
+    border-width: 0px 10px 14px;
+    border-style:solid;
+    border-color:transparent transparent #fff;
+    top: -14px;
+    left: 30px;
+}
+.LoginNavPupAfter:after{
+	content: '';
+	display: block;
+	position: absolute;
+	width:0;
+	height:0;
+	border-width: 0px 10px 14px;
+	border-style:solid;
+	border-color:transparent transparent #fff;
+	top: -14px;
+	left: 40px;
+}
+
+
+.notLoginNavPup>p{
+	display: block;
+	padding: 0 10px;
+	border-bottom: 1px solid rgba(222,222,222,1);
+	height: 40px;
+	line-height: 40px;
+	color: #666;
+	font-size: 16px;
+}
+.notLoginNavPup>p:last-of-type{
+	border-bottom:none;
+}
+.notLoginNavPup>p:hover{
+	color: #FF9600;
+}
+
+
+
+.notLoginNav {
+	display: flex;
+}
+
+.notLoginNav>a{
+	display: inline-block;
+	line-height: 130px;
+	height: 130px;
+	padding: 0 26px;
+	color: #fff;
+	position: relative;
+}
+.notLoginNavA>a{
+	padding: 0 16px !important;
+}
+.notLoginNavA>a:hover{
+	transition: all 0.3s !important;
+}
+.notLoginNav>a:hover {
+	transition: all 0.3s cubic-bezier(0.785, 0.135, 0.150, 0.860) 200ms;
+	color: #FF9600;
+}
+
+.notLoginNav>a:last-of-type:hover,
+.notLoginNav>a:nth-of-type(6):hover {
+	color: #fff;
+}
+
+.notLoginNav>span {
+	display: inline-block;
+}
+.notLoginNaAhover:hover{
+	color: #fff !important;
+}
+.notLoginNavFive{
+    width: 70px;
+}
+.notLoginNavFive>span{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	overflow: hidden;
+	white-space: nowrap;
+}
+/*hover图标icon*/
+.notLoginNavFive:after{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 56px;
+    left: 8px;
+    width: 15px;
+    height: 18px;
+	transition: all 0.5s;
+	background: url(../images/icon/icon_not_user.png) center top no-repeat;
+}
+
+.notLoginNavFive:hover:after{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 56px;
+    left: 8px;
+    width: 15px;
+    height: 18px;
+	transition: all 0.5s;
+	background: url(../images/icon/icon_not_user.png) center bottom no-repeat;
+}
+
+
+.notLoginNavOne>span:after,
+.notLoginNavTwo>span:after,
+.notLoginNavThree>span:after,
+.notLoginNavFour>span:after,
+.notLoginNavFive>span:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 56px;
+	transition: all 0.5s;
+}
+
+.notLoginNavOne:hover span:after,
+.notLoginNavTwo:hover span:after,
+.notLoginNavThree:hover span:after,
+.notLoginNavFour:hover span:after,
+.notLoginNavFive:hover span:after {
+	transition: all 0.3s;
+}
+
+
+/*1*/
+
+.notLoginNavOne>span:after {
+	width: 17px;
+	left: 6px;
+	height: 17px;
+	background: url(../images/icon/icon_not_home.png) center top no-repeat;
+}
+
+.notLoginNavOne:hover span:after {
+	background: url(../images/icon/icon_not_home.png) center bottom no-repeat;
+}
+
+
+/*2*/
+
+.notLoginNavTwo>span:after {
+	width: 14px;
+	height: 17px;
+	left: 9px;
+	background: url(../images/icon/icon_not_order.png) center top no-repeat;
+}
+
+.notLoginNavTwo:hover span:after {
+	background: url(../images/icon/icon_not_order.png) center bottom no-repeat;
+}
+
+
+/*3*/
+
+.notLoginNavThree>span:after {
+	width: 18px;
+	height: 17px;
+	left: 6px;
+	background: url(../images/icon/icon_not_shop.png) center top no-repeat;
+}
+
+.notLoginNavThree:hover span:after {
+	background: url(../images/icon/icon_not_shop.png) center bottom no-repeat;
+}
+
+
+/*4*/
+
+.notLoginNavFour>span:after {
+	width: 18px;
+	height: 18px;
+	left: 6px;
+	background: url(../images/icon/icon_not_shou.png) center top no-repeat;
+}
+
+.notLoginNavFour:hover span:after {
+	background: url(../images/icon/icon_not_shou.png) center bottom no-repeat;
+}
+
+
+/*5*/
+
+.notLoginNavFive>span:after {
+	width: 9px;
+	height: 5px;
+	right: 16px;
+	top: 64px;
+	background: url(../images/icon/index_icon_up.png) center top no-repeat;
+}
+.notLoginNavFiveSpan{
+	display: inline-block;
+	position: relative;
+}
+
+
+
+.notLoginNavFiveSpan>span:after{
+	content: '';
+	display: block;
+	width: 10px;
+	height: 5px;
+	position: absolute;
+	right: 0px;
+	top: 64px;
+	background:url(../images/icon/index_icon_up.png) center top no-repeat;
+}
+.notLoginNavFiveSpan:hover span:after{
+	width: 10px;
+	height: 5px;
+	position: absolute;
+	right: 0px;
+	top: 64px;
+	background:url(../images/icon/index_icon_up.png) center bottom no-repeat;
+}
+
+.notLoginNavgEmail {
+	background: url(../images/icon/nav_icon_e-mail1.png) no-repeat 4px center;
+}
+
+.notLoginNavgPhone {
+	background: url(../images/nav_icon_telephone.png) no-repeat 4px center;
+	background-size: 16px 14px;
+}
+
+
+/*登陆注册入口*/
+
+#loginEntrance {
+	width: 200px;
+	height: 62px;
+	line-height: 62px;
+	position: absolute;
+	bottom: -620px;
+	right: 0;
+	color: #FF9600;
+	font-size: 20px;
+	background: rgba(254, 254, 254, 0.93);
+	border-radius: 4px;
+	box-shadow: 0px 10px 24px rgba(222, 222, 222, 0.75);
+	text-align: center;
+}
+
+#loginEntrance>a {
+	display: inline-block;
+	/*font-size: 20px;*/
+	color: #FF9600;
+	padding: 0 10px;
+}
+
+
+/*关于我们*/
+
+.notLoginAbout {
+	display: flex;
+	margin-top: 128px !important;
+	margin-bottom: 130px !important;
+}
+
+.notLoginAboutImg,
+.aboutContent {
+	flex: 1;
+}
+
+.aboutContent {
+	height: 400px;
+}
+
+.notLoginAboutImg {
+	position: relative;
+}
+
+
+/*关于我们图片*/
+
+.notLoginAboutImg img {
+	display: block;
+}
+
+.aboutImgTWO,
+.aboutImgOne {
+	cursor: pointer;
+	overflow: hidden;
+	position: absolute;
+}
+
+.aboutImgOne {
+	width: 521px;
+	height: 327px;
+	left: 0;
+	top: 0;
+}
+
+.aboutImgOne img {
+	width: 521px;
+	height: 327px;
+	transition: all 1s;
+}
+
+.aboutImgTWO {
+	width: 380px;
+	height: 380px;
+	right: 0;
+	top: 90px;
+}
+
+.aboutImgTWO img {
+	width: 380px;
+	height: 380px;
+	transition: all 1s;
+}
+.aboutImgTWO:hover,
+.aboutImgOne:hover {
+	z-index: 1;
+	transition: all 1s;
+}
+.aboutImgTWO:hover img,
+.aboutImgOne:hover img {
+	transition: all 1s;
+	transform: scale(1.1);
+}
+
+.notLoginAboutBoss>h3 {
+	color: #FF9600;
+	font-size: 32px;
+}
+
+.notLoginAboutBoss>h3>i {
+	font-weight: 100;
+}
+
+.notLoginAboutBoss>h4 ,.notLoginAboutBossTwo>h4{
+	font-size: 16px;
+	color: #333;
+	margin: 114px 0 20px 0;
+	padding-left: 90px;
+	font-weight: bold;
+}
+
+.notLoginAboutBoss>p ,.notLoginAboutBossTwo>p{
+	padding-left: 88px;
+}
+
+.notLoginAboutBoss>p>span,.notLoginAboutBossTwo>p>span {
+	display: inline-block;
+	color: #333;
+	font-size: 16px;
+	line-height: 28px;
+}
+
+.notLoginAboutBoss>p>span:first-of-type,.notLoginAboutBossTwo>p>span:first-of-type {
+	width: 126px;
+}
+#gradeStar {
+	width: 19px;
+	height: 19px;
+}
+.notLoginAboutFontMain {
+	width: 380px;
+}
+
+.date {
+	vertical-align: top;
+}
+
+
+/*我们的优势*/
+
+.notLoginTitle {
+	margin-top: 200px;
+	text-align: center;
+}
+
+.notLoginTitle>h4 {
+	text-align: center;
+	color: #FF9600;
+	font-size: 32px;
+	margin-bottom: 20px;
+}
+
+.notLoginTitle>p {
+	color: #FF9600;
+	font-size: 24px;
+	margin-bottom: 42px;
+}
+
+.ourAdvantage {
+	width: 100%;
+	height: 380px;
+	background: url(../images/ourBg.png) no-repeat -10px top;
+	background-size: cover;
+}
+
+.subOurAdvantage {
+	display: flex;
+}
+
+.ourAdvantageContent {
+	flex: 1;
+	margin: 78px 20px 0 0;
+	width: 224px;
+	height: 224px;
+	background: rgba(248, 248, 248, 1);
+	position: relative;
+	/*transition: .5s;*/
+}
+.ourAdvantageContent::before{
+	display: block;
+	content: '';
+	position: absolute;
+	width: 0;
+	height:3px;
+	background: #000000;
+	top: 0;
+	left: 50%;
+}
+.ourAdvantageContent:hover {
+	transition: .5s;
+	box-shadow: 0 8px 30px -3px rgba(0, 0, 0, .15);
+	/*box-shadow: 0 0 30px -2px rgba(0, 0, 0, .15);*/
+}
+
+.ourAdvantageContent:hover .ourAdvantageCircle>img {
+	transition: .6s;
+	transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	/* IE 9 */
+	-moz-transform: rotate(360deg);
+	/* Firefox */
+	-webkit-transform: rotate(360deg);
+	/* Safari 和 Chrome */
+	-o-transform: rotate(360deg);
+	/* Opera */
+}
+
+.ourAdvantageContent:last-of-type {
+	margin-right: 0;
+}
+
+.ourAdvantageContent>h2 {
+	margin: 61px 0 31px 0;
+	color: #333333;
+	font-size: 18px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.ourAdvantageContent>p {
+	padding: 0 24px;
+	line-height: 28px;
+	color: #666666;
+	font-size: 16px;
+	text-align: center;
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+
+
+.ourAdvantageCircle {
+	width: 80px;
+	height: 80px;
+	/*background:;*/
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	top: -40px;
+	transform: translateX(-50%);
+}
+
+.ourAdvantageCircle_one {
+
+	background: rgba(255, 46, 86, 1);
+}
+
+.ourAdvantageCircle_two {
+	background: rgba(254, 150, 0, 1);
+}
+
+.ourAdvantageCircle_three {
+	background: rgba(75, 219, 100, 1);
+}
+
+.ourAdvantageCircle_four {
+	background: rgba(255, 205, 0, 1);
+}
+
+.ourAdvantageCircle_five {
+	background: rgba(0, 124, 255, 1);
+}
+
+
+/*五个icon*/
+
+.ourAdvantageCircle>img {
+	display: block;
+}
+
+.ourAdvantageCircle_one>img {
+	width: 33px;
+	height: 35px;
+	margin: 20px auto 0;
+}
+
+.ourAdvantageCircle_two>img {
+
+	width: 25px;
+	height: 29px;
+	margin: 24px auto 0;
+}
+
+.ourAdvantageCircle_three>img {
+
+	width: 31px;
+	height: 31px;
+	margin: 22px auto 0;
+}
+
+.ourAdvantageCircle_four>img {
+
+	width: 30px;
+	height: 35px;
+	margin: 20px auto 0;
+}
+
+.ourAdvantageCircle_five>img {
+
+	width: 31px;
+	height: 31px;
+	margin: 22px auto 0;
+}
+
+
+/*热门推荐  列表渲染*/
+
+.Recommend {
+	margin-bottom: 132px;
+}
+
+.subRecommend {
+	display: flex;
+}
+
+.recommendList {
+	width: 278px;
+	/*height:358px;*/
+	background: rgba(255, 255, 255, 1);
+	box-shadow: 0px 10px 24px rgba(222, 222, 222, 0.48);
+	margin-right: 32px;
+}
+
+.recommendListImg {
+	position: relative;
+	overflow: hidden;
+	width: 276px;
+	height: 242px;
+	padding-top: 10px;
+}
+
+.recommendListImg>img {
+	display: block;
+	position: absolute;
+	width: 286px;
+	height: 242px;
+	left: 0;
+	top: 10px;
+	/*transition: 0.10s;*/
+}
+
+.recommendList:hover .recommendListImg img {
+	top: 0px;
+	transition: 0.60s;
+}
+
+.recommendList:last-of-type {
+	margin-right: 0;
+}
+
+.recommendList>img {
+	display: block;
+	width: 276px;
+	height: 242px;
+}
+
+.recommendListMain {
+	padding: 21px 20px 5px 19px;
+	transition: .6s;
+}
+
+.recommendListMain>p {
+	width: 100%;
+	color: #333333;
+	line-height: 26px;
+	font-size: 18px;
+}
+
+.recommendList:hover .recommendListMain {
+	transition: .6s;
+	box-shadow: 0 8px 30px -3px rgba(0, 0, 0, .15);
+}
+
+.recommendListPrice {
+	line-height: 42px !important;
+	font-size: 24px !important;
+	color: #FF9600 !important;
+	text-align: right;
+}
+
+
+/*数据更新布局*/
+/*转换成jpg格式*/
+.dataUpdate {
+	height: 611px;
+	background: url(../images/content_product_img_bg.jpg) no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.subDataUpdate {
+	width: 490px;
+	height: 324px;
+	background: rgba(255, 255, 255, 1);
+	opacity: 0.93;
+}
+
+.dataUpdateList {
+	/*display: flex;*/
+}
+
+.dataUpdateListFica {
+	width: 244px;
+	border-right: 1px solid #F2F2F2;
+	border-bottom: 1px solid #F2F2F2;
+	float: left;
+	padding: 32px 0 0px 0;
+}
+
+.dataUpdateListFica>p {
+	color: #333333;
+	font-size: 16px;
+	line-height: 28px;
+	text-align: center;
+}
+
+.dataUpdateNumber {
+	line-height: 66px !important;
+	color: #FF9600 !important;
+	font-size: 30px !important;
+}
+
+.dataUpdateListFica:nth-of-type(even) {
+	border-right: none;
+}
+
+.dataUpdateListFica:nth-of-type(3),
+.dataUpdateListFica:nth-of-type(4) {
+	border-bottom: none;
+}
+
+
+/*合作单位*/
+
+.cooperation {
+	margin-bottom:80px;
+}
+
+.swiper-slide>img {
+	width: 1200px;
+	display: block;
+	margin: 64px auto 0;
+	padding-bottom: 40px;
+}
+
+.swiper-pagination-bullet{
+    width: 10px !important;
+    height: 10px !important;
+    display: inline-block !important;
+    border-radius: 100% !important;
+    background: #fff !important;
+    /*opacity: .2;*/
+   	border: 1px solid rgba(0,0,0,0.2) !important;
+}
+.swiper-pagination-bullet-active {
+    opacity: 0.2 !important;
+    background: #000 !important;
+}
+/*========================================未登录首页完成*/
+
+
+/*=============================================登陆首页样式开始*/
+
+
+/*酒店搜索框   tab  切换*/
+
+#bannerSearch {
+	display: block;
+	width: 1136px;
+	height: 168px;
+	background: rgba(254, 254, 254, 1);
+	opacity: 0.93;
+	border-radius: 4px;
+	box-shadow: 0px 10px 24px rgba(222, 222, 222, 0.75);
+	position: absolute;
+	/*bottom: -714px;*/
+	top: 634px;
+	left: 0;
+	/*margin: 0 auto;*/
+	padding: 45px 0 0 64px;
+	transition: .3s;
+	z-index: 9999;
+}
+
+.bannerSearchTab,
+.indexLocalAmusementTab,
+.subIndexHotelMain {
+	display: flex;
+}
+
+.bannerSearchTab>li {
+	margin-right: 240px;
+	color: #333;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.bannerSearchTabActive {
+	color: #FF9600 !important;
+}
+
+.bannerSearchTab>li:hover {
+	color: #FF9600;
+	transition: 400ms ease all;
+}
+
+
+/*tab内容切换*/
+
+.bannerSearchTabListActive {
+	display: none;
+}
+
+
+/*酒店内容样式*/
+
+.bannerSearchTabList {
+	margin-top: 24px;
+}
+
+.bannerSearchTabFixed {
+	display: flex;
+}
+
+.bannerSearchTabList>p {
+	position: relative;
+}
+
+.bannerSearchTabList input {
+	display: inline-block;
+	width: 219px;
+	height: 28px;
+	font-size: 16px;
+	color: #333;
+	margin-right: 38px;
+	background: rgba(255, 255, 255, 1);
+	border-radius: 4px;
+	box-shadow: 0px 10px 24px rgba(222, 222, 222, 0.48);
+	padding: 10px;
+}
+
+#searchHotelImg {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	position: absolute;
+	right: 54px;
+	top: 16px;
+}
+
+
+/*搜索按钮*/
+
+.bannerSearchTabSearch,
+.bannerSearchTickerBtn {
+	width: 239px;
+	height: 48px;
+	background: rgba(255, 150, 0, 1);
+	border-radius: 4px;
+	box-shadow: 0px 10px 24px rgba(222, 222, 222, 0.48);
+	font-size: 18px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.bannerSearchTabSearch:hover,
+.bannerSearchTickerBtn:hover {
+	color: #FF9600;
+	transition: .5s;
+	background: transparent;
+	border: 1px solid #FF9600;
+}
+
+
+/*门票信息*/
+
+.bannerSearchTickerTitle {
+	font-size: 14px;
+	color: #333;
+	margin-bottom: 10px;
+}
+
+.bannerSearchTicker {
+	display: flex;
+	position: relative;
+}
+
+#bannerSearchTickerQuery,
+#bannerSearchLocalQuery {
+	display: inline-block;
+	width: 790px;
+	height: 28px;
+	border-color: rgb(185, 185, 185);
+}
+
+.keywords_list{
+	display: none;
+	margin-top: 6px;
+	background-color: #fff;
+	box-shadow: 0 0 3px rgba(0,0,0,.3);
+	border-radius: 4px;
+	z-index: 2000;
+	overflow-y: scroll;
+	height: 200px;
+	position: absolute;
+	border: 1px solid #ccc;
+}
+/*门票*/
+.keywords_list_tiket{
+	width: 810px;
+	top: 46px;
+	left: 0;
+}
+/*酒店搜索隐藏框*/
+.keywords_list_hotel{
+	width: 240px;
+	top: 136px;
+	right: 340px;
+}
+
+
+.keywords_list>li{
+	height: 34px;
+	line-height: 34px;
+	font-size: 14px;
+	color: #333;
+	cursor: pointer;
+}
+.keywords_list>li:hover{
+	background: #ff9600;
+}
+.keywords_list>li>span{
+	flex: 1;
+	padding: 0 10px;
+	overflow: hidden;
+}
+.keywords_list>li>span:last-of-type{
+	text-align: right;
+	font-size: 12px;
+}
+.SearchKeyTiketVal,.SearchKeyTiketValB{
+    color: #999;
+}
+.SearchKeyVal>i{
+    display: inline-block;
+    color: #333;
+
+}
+.keywords_list>li>span>b{
+	display: inline-block;
+	color: #999;
+}
+
+
+
+/*消息推送*/
+
+.box {
+	width: 1200px;
+	height: 24px;
+	line-height: 24px;
+	overflow: hidden;
+	margin: 175px auto 74px;
+}
+
+.t_news {
+	height: 16px;
+	color: #fff;
+	padding-left: 10px;
+	margin: 8px 0;
+	overflow: hidden;
+	position: relative;
+}
+
+.t_news>img {
+	display: inline-block;
+	width: 22px;
+	height: 16px;
+}
+
+.news_li,
+.swap {
+	line-height: 16px;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 40px;
+}
+
+.news_li a,
+.swap a {
+	color: #FF9600;
+}
+
+.swap {
+	top: 19px;
+}
+
+
+/*------当地玩乐*/
+
+.indexTitle {
+	width: 130px;
+	margin: 0 auto 87px;
+	font-size: 32px;
+	color: #333333;
+}
+
+.indexLocalAmusement {
+	margin-bottom: 123px !important;
+}
+
+.indexTitle::after {
+	display: block;
+	content: '';
+	background: #FF9600;
+	width: 30px;
+	height: 2px;
+	margin: 10px auto 0;
+}
+
+.indexLocalAmusementTab {
+	width: 580px;
+	margin: 0 auto;
+}
+
+.indexLocalAmusementTab>li {
+	text-align: center;
+	width: 82px;
+	height: 28px;
+	line-height: 28px;
+	margin-right: 10px;
+	font-size: 16px;
+	color: #333;
+	border: 2px solid transparent;
+	cursor: pointer;
+}
+
+.indexLocalAmusementTab>li:last-of-type {
+	margin-right: 0;
+}
+
+.indexLocalAmusementTab>li:hover {
+	border: 2px solid #FF9600;
+	border-radius: 16px;
+}
+
+.indexLocalAmusementTabActive {
+	border: 2px solid #FF9600;
+	border-radius: 16px;
+}
+
+.indexLocalAmusementTabActive {
+	border: 2px solid #FF9600 !important;
+	border-radius: 16px;
+}
+
+
+/*热门酒店*/
+.subIndexHotelMain>a{
+	display: block;
+	margin-right: 30px;
+}
+.subIndexHotelMainList {
+	width: 381px;
+	height: 290px;
+	
+	margin-bottom: 349px;
+}
+
+.subIndexHotelMainListOver {
+	width: 381px;
+	height: 290px;
+	overflow: hidden;
+}
+
+.subIndexHotelMainListOver>img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	transition: all 1s;
+}
+
+.subIndexHotelMainList:hover .subIndexHotelMainListOver>img {
+	transform: scale(1.1);
+}
+
+
+/*热门酒店列表*/
+
+.subIndexHotelMainListCotent {
+	width: 202px;
+	height: 139px;
+	background: rgba(255, 255, 255, 1);
+	border-radius: 4px;
+	box-shadow: 0px 4px 24px rgba(222, 222, 222, 0.48);
+	margin: -54px auto 0;
+	position: relative;
+	padding: 54px 57px;
+}
+
+.subIndexHotelMainListCotent:hover {
+	transition: .5s;
+	box-shadow: 0 8px 30px -3px rgba(0, 0, 0, .15);
+}
+
+.subIndexHotelMainList:last-of-type {
+	margin-right: 0;
+}
+
+.subIndexHotelMainListCotent>h4 {
+	font-size: 18px;
+	color: #000;
+	margin-bottom: 28px;
+	/*font-weight: bold;*/
+	-webkit-line-clamp: 1 !important;
+}
+
+.subIndexHotelMainListCotent>p {
+	line-height: 26px;
+	font-size: 16px;
+	color: #666;
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+}
+
+.subIndexHotelMainListCotentPrice {
+	width: 130px;
+	height: 46px;
+	line-height: 46px;
+	background: rgba(255, 150, 0, 1);
+	border-radius: 4px;
+	position: absolute;
+	right: -20px;
+	bottom: -20px;
+	font-size: 20px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+/*元素抖动样式动画*/
+
+.shake.freez.shake-little {
+	-webkit-animation-name: shake-little;
+	-ms-animation-name: shake-little;
+	animation-name: shake-little;
+	-webkit-animation-duration: 5s;
+	-ms-animation-duration: 5s;
+	animation-duration: 5s;
+	-webkit-animation-iteration-count: infinite;
+	-ms-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	-ms-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+	-webkit-animation-delay: 0s;
+	-ms-animation-delay: 0s;
+	animation-delay: 0s;
+	-webkit-animation-play-state: running;
+	-ms-animation-play-state: running;
+	animation-play-state: running
+}
+
+.shake.shake-little {
+	-webkit-animation-name: shake-little;
+	-ms-animation-name: shake-little;
+	animation-name: shake-little;
+	-webkit-animation-duration: 5s;
+	-ms-animation-duration: 5s;
+	animation-duration: 5s;
+	-webkit-animation-iteration-count: infinite;
+	-ms-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	-ms-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+	-webkit-animation-delay: 0s;
+	-ms-animation-delay: 0s;
+	animation-delay: 0s;
+	-webkit-animation-play-state: running;
+	-ms-animation-play-state: running;
+	animation-play-state: running
+}
+
+.shake.shake-constant.shake-little {
+	-webkit-animation-name: shake-little;
+	-ms-animation-name: shake-little;
+	animation-name: shake-little;
+	-webkit-animation-duration: 5s;
+	-ms-animation-duration: 5s;
+	animation-duration: 5s;
+	-webkit-animation-iteration-count: infinite;
+	-ms-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	-ms-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+	-webkit-animation-delay: 0s;
+	-ms-animation-delay: 0s;
+	animation-delay: 0s;
+	-webkit-animation-play-state: running;
+	-ms-animation-play-state: running;
+	animation-play-state: running
+}
+
+@-webkit-keyframes shake-little {
+	0% {
+        transform: translate(0px, 0px) rotate(0deg)
+    }
+    2% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    4% {
+        transform: translate(-2px, -2px) rotate(1deg)
+    }
+    6% {
+        transform: translate(0px, 0px) rotate(-1deg)
+    }
+    8% {
+        transform: translate(0px, -2px) rotate(1deg)
+    }
+    10% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    12% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+    14% {
+        transform: translate(0px, 0px) rotate(-1deg)
+    }
+    16% {
+        transform: translate(0px, -2px) rotate(1deg)
+    }
+    18% {
+        transform: translate(0px, 0px) rotate(-1deg)
+    }
+    20% {
+        transform: translate(-2px, -2px) rotate(1deg)
+    }
+    22% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    24% {
+        transform: translate(-2px, -2px) rotate(1deg)
+    }
+    26% {
+        transform: translate(-2px, 0px) rotate(-1deg)
+    }
+    28% {
+        transform: translate(0px, -2px) rotate(1deg)
+    }
+    30% {
+        transform: translate(0px, -2px) rotate(-1deg)
+    }
+    32% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+    34% {
+        transform: translate(0px, -1px) rotate(-1deg)
+    }
+    36% {
+        transform: translate(-2px, 0px) rotate(1deg)
+    }
+    38% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    40% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+    42% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    44% {
+        transform: translate(-2px, 0px) rotate(1deg)
+    }
+    46% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    48% {
+        transform: translate(0px, -2px) rotate(1deg)
+    }
+    50% {
+        transform: translate(0px, -2px) rotate(-1deg)
+    }
+    52% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+    54% {
+        transform: translate(-2px, 0px) rotate(-1deg)
+    }
+    56% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+    58% {
+        transform: translate(0px, 0px) rotate(-1deg)
+    }
+    60% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+    62% {
+        transform: translate(0px, -2px) rotate(-1deg)
+    }
+    64% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+    66% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    68% {
+        transform: translate(0px, -2px) rotate(1deg)
+    }
+    70% {
+        transform: translate(0px, 0px) rotate(-1deg)
+    }
+    72% {
+        transform: translate(-2px, -2px) rotate(1deg)
+    }
+    74% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    76% {
+        transform: translate(-2px, 0px) rotate(1deg)
+    }
+    78% {
+        transform: translate(0px, 0px) rotate(-1deg)
+    }
+    80% {
+        transform: translate(0px, -2px) rotate(1deg)
+    }
+    82% {
+        transform: translate(-2px, 0px) rotate(-1deg)
+    }
+    84% {
+        transform: translate(-2px, -2px) rotate(1deg)
+    }
+    86% {
+        transform: translate(0px, -2px) rotate(-1deg)
+    }
+    88% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+    90% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    92% {
+        transform: translate(-2px, 0px) rotate(1deg)
+    }
+    94% {
+        transform: translate(-2px, 0px) rotate(-1deg)
+    }
+    96% {
+        transform: translate(0px, -2px) rotate(1deg)
+    }
+    98% {
+        transform: translate(0px, -2px) rotate(-1deg)
+    }
+}
+@-ms-keyframes shake-little {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg)
+    }
+    2% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    4% {
+        transform: translate(-2px, -2px) rotate(1deg)
+    }
+    6% {
+        transform: translate(0px, 0px) rotate(-1deg)
+    }
+    8% {
+        transform: translate(0px, -2px) rotate(1deg)
+    }
+    10% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    12% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+    14% {
+        transform: translate(0px, 0px) rotate(-1deg)
+    }
+    16% {
+        transform: translate(0px, -2px) rotate(1deg)
+    }
+    18% {
+        transform: translate(0px, 0px) rotate(-1deg)
+    }
+    20% {
+        transform: translate(-2px, -2px) rotate(1deg)
+    }
+    22% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    24% {
+        transform: translate(-2px, -2px) rotate(1deg)
+    }
+    26% {
+        transform: translate(-2px, 0px) rotate(-1deg)
+    }
+    28% {
+        transform: translate(0px, -2px) rotate(1deg)
+    }
+    30% {
+        transform: translate(0px, -2px) rotate(-1deg)
+    }
+    32% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+    34% {
+        transform: translate(0px, -1px) rotate(-1deg)
+    }
+    36% {
+        transform: translate(-2px, 0px) rotate(1deg)
+    }
+    38% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    40% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+    42% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    44% {
+        transform: translate(-2px, 0px) rotate(1deg)
+    }
+    46% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    48% {
+        transform: translate(0px, -2px) rotate(1deg)
+    }
+    50% {
+        transform: translate(0px, -2px) rotate(-1deg)
+    }
+    52% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+    54% {
+        transform: translate(-2px, 0px) rotate(-1deg)
+    }
+    56% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+    58% {
+        transform: translate(0px, 0px) rotate(-1deg)
+    }
+    60% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+    62% {
+        transform: translate(0px, -2px) rotate(-1deg)
+    }
+    64% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+    66% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    68% {
+        transform: translate(0px, -2px) rotate(1deg)
+    }
+    70% {
+        transform: translate(0px, 0px) rotate(-1deg)
+    }
+    72% {
+        transform: translate(-2px, -2px) rotate(1deg)
+    }
+    74% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    76% {
+        transform: translate(-2px, 0px) rotate(1deg)
+    }
+    78% {
+        transform: translate(0px, 0px) rotate(-1deg)
+    }
+    80% {
+        transform: translate(0px, -2px) rotate(1deg)
+    }
+    82% {
+        transform: translate(-2px, 0px) rotate(-1deg)
+    }
+    84% {
+        transform: translate(-2px, -2px) rotate(1deg)
+    }
+    86% {
+        transform: translate(0px, -2px) rotate(-1deg)
+    }
+    88% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+    90% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    92% {
+        transform: translate(-2px, 0px) rotate(1deg)
+    }
+    94% {
+        transform: translate(-2px, 0px) rotate(-1deg)
+    }
+    96% {
+        transform: translate(0px, -2px) rotate(1deg)
+    }
+    98% {
+        transform: translate(0px, -2px) rotate(-1deg)
+    }
+}
+@keyframes shake-little {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg)
+    }
+    2% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    4% {
+        transform: translate(-2px, -2px) rotate(1deg)
+    }
+    6% {
+        transform: translate(0px, 0px) rotate(-1deg)
+    }
+    8% {
+        transform: translate(0px, -2px) rotate(1deg)
+    }
+    10% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    12% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+    14% {
+        transform: translate(0px, 0px) rotate(-1deg)
+    }
+    16% {
+        transform: translate(0px, -2px) rotate(1deg)
+    }
+    18% {
+        transform: translate(0px, 0px) rotate(-1deg)
+    }
+    20% {
+        transform: translate(-2px, -2px) rotate(1deg)
+    }
+    22% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    24% {
+        transform: translate(-2px, -2px) rotate(1deg)
+    }
+    26% {
+        transform: translate(-2px, 0px) rotate(-1deg)
+    }
+    28% {
+        transform: translate(0px, -2px) rotate(1deg)
+    }
+    30% {
+        transform: translate(0px, -2px) rotate(-1deg)
+    }
+    32% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+    34% {
+        transform: translate(0px, -1px) rotate(-1deg)
+    }
+    36% {
+        transform: translate(-2px, 0px) rotate(1deg)
+    }
+    38% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    40% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+    42% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    44% {
+        transform: translate(-2px, 0px) rotate(1deg)
+    }
+    46% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    48% {
+        transform: translate(0px, -2px) rotate(1deg)
+    }
+    50% {
+        transform: translate(0px, -2px) rotate(-1deg)
+    }
+    52% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+    54% {
+        transform: translate(-2px, 0px) rotate(-1deg)
+    }
+    56% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+    58% {
+        transform: translate(0px, 0px) rotate(-1deg)
+    }
+    60% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+    62% {
+        transform: translate(0px, -2px) rotate(-1deg)
+    }
+    64% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+    66% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    68% {
+        transform: translate(0px, -2px) rotate(1deg)
+    }
+    70% {
+        transform: translate(0px, 0px) rotate(-1deg)
+    }
+    72% {
+        transform: translate(-2px, -2px) rotate(1deg)
+    }
+    74% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    76% {
+        transform: translate(-2px, 0px) rotate(1deg)
+    }
+    78% {
+        transform: translate(0px, 0px) rotate(-1deg)
+    }
+    80% {
+        transform: translate(0px, -2px) rotate(1deg)
+    }
+    82% {
+        transform: translate(-2px, 0px) rotate(-1deg)
+    }
+    84% {
+        transform: translate(-2px, -2px) rotate(1deg)
+    }
+    86% {
+        transform: translate(0px, -2px) rotate(-1deg)
+    }
+    88% {
+        transform: translate(0px, 0px) rotate(1deg)
+    }
+    90% {
+        transform: translate(-2px, -2px) rotate(-1deg)
+    }
+    92% {
+        transform: translate(-2px, 0px) rotate(1deg)
+    }
+    94% {
+        transform: translate(-2px, 0px) rotate(-1deg)
+    }
+    96% {
+        transform: translate(0px, -2px) rotate(1deg)
+    }
+    98% {
+        transform: translate(0px, -2px) rotate(-1deg)
+    }
+}
+.shake:hover {
+	animation-play-state: paused;
+}
+
+.laydate-day-mark::after {
+    background-color: #FF9600 !important;
+   /*width: 12px !important;
+   height: 10px !important;
+   background: transparent !important;
+   border: 1px solid #ff9600 !important;*/
+}
+
+
+/*首页当地玩乐    样式*/
+.indexLocalAmusementMainBox{
+	margin: 90px 0;
+	/*height: 378px;*/
+	display: none ;
+}
+.AmusementShow{
+	display: block ;
+}
+
+.swiper-container{
+	float: left;
+}
+.hotelHomeDetailsImg,.swiper-slide,.swiper-container{
+	position: relative;
+	width: 572px;
+	margin: 0;
+}
+.hotelHomeDetailsImg>img{
+	display: block;
+	height: 400px;
+	width: 100%;
+}
+
+
+/*首页 当地玩乐   有部分样式*/
+.hotelHomeDetailsContent{
+	padding: 70px 0 0 90px;
+}
+
+
+.hotelHomeDetailsContent>h4{
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 40px;
+}
+.hotelHomeDetailsContent>p{
+	line-height: 28px;
+	font-size: 16px;
+	margin-bottom: 40px;
+	color: #666;
+}
+.indexSucssBtn{
+	margin: 0 0 300px !important;
+}
+
+
+.luwaysAbout>p{
+	line-height: 28px;
+	font-size: 16px;
+	color: #333;
+	/*text-indent: 32px;*/
+	margin-top: 10px;
+}
+
+/*首页未登录  弹出  模态框*/
+/*主容器*/
+
+
+.dialogue-mask{
+	position:fixed;                        /*弹出层*/
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background-color:rgba(128,128,128,0.5);
+	display:none;
+	overflow:auto;
+}
+
+
+
+.dialogue-container{
+	position:absolute;
+	width:340px;
+	left:50%;
+	top:40%;
+	transform:translate(-50%,-50%);
+	display:block;
+	z-index:2;
+}
+
+.dialogue-title{
+	font-size:16px;
+	font-weight:bold;
+	line-height:30px;
+	position:relative;
+}
+
+.border-bottom::after{
+	content:"";
+	width:100%;
+	height:1px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	/*background-color:#b9b9b9;*/
+	-webkit-transform:scaleY(0.5);
+
+}
+
+.dialogue-content{
+	position: relative;
+	font-size:14px;
+	line-height:25px;
+	display: block;
+	width: 340px;
+	height: 320px;
+}
+.dialogue-content>img{
+	display: block;
+	width: 340px;
+	height: 320px;
+}
+.dialogue-btn{
+	margin-top:10px;
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	left: 94px;
+	bottom: 36px;
+}
+
+.dialogue-cancel,.dialogue-sure{
+	margin-right:10px;
+	width:100px;
+	height:36px;
+	line-height: 36px;
+	text-align: center;
+	background:rgba(255,150,0,1);
+	border:1px solid rgba(222,222,222,1);
+	border-radius:18px;
+	font-size: 16px;
+	color: #fff;
+	transition: .5s;
+	cursor: pointer;
+}
+.dialogue-cancel:hover,.dialogue-sure:hover{
+	color: #ff9600;
+	background: #fff;
+	transition: .5s;
+}
+.dialogue-cancel{
+	margin-right: 0;
+}
+
+
+@-webkit-keyframes dialogue-in{
+	0% {top:0;}
+	50% {top:40%;}
+	90% {top:37%;}
+	100% {top:40%;}
+}
+
+.animation-dialogue-in{
+	display:block;
+	-webkit-animation:dialogue-in 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+/*隐藏滚动条*/
+.forbid-scroll{
+	height:100%;
+	overflow:hidden;
+}
+
+
+
+
+/*swiper  分页样式*/
+.swiper-pagination-bullet{
+	width: 10px !important;
+	height: 10px !important;
+	display: inline-block !important;
+	border-radius: 100% !important;
+	background: #fff !important;
+	/*opacity: .2;*/
+	border: 1px solid rgba(0,0,0,0.2) !important;
+}
+.swiper-pagination-bullet-active {
+	opacity: 0.2 !important;
+	background: #ff9600 !important;
+}

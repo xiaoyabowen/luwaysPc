@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>路途-专注于境外目的地产品</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!--[if lte IE 9]>
+		<script src="https://cdn.bootcss.com/html5shiv/3.6/html5shiv.min.js"></script>
+		<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+		<![endif]-->
+
+  <!--[if lte IE 8]>
+	    <div class="text-xs-center m-b-0 bg-blue-grey-100 alert">
+	        <button type="button" class="close" aria-label="Close" data-dismiss="alert">
+	            <span aria-hidden="true">×</span>
+	        </button>
+	        	你正在使用一个 <strong>过时</strong> 的浏览器。请 <a href=https://browsehappy.com/ target=_blank style="color:#FF9600;">升级您的浏览器</a>，以提高您的体验。
+	    </div>
+	    <![endif]-->
+  <!--网页logo-->
+  <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="../css/common.css" />
+  <link rel="stylesheet" type="text/css" href="../css/hotel.css" />
+  <script src="../js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+  <style>
+
+
+
+  </style>
+</head>
+
+<body>
+  <!-- header -->
+  <div class="bodyHeader">
+    <div class="subBodyHeader cssFlex headerSubCommon">
+      <div class="comNavLogo">
+        <a href="indexNotLogin.html"><img src="../images/nav_logo.png" id="logoImg" /></a>
+      </div>
+      <div class="bodyNav cssFlex">
+        <a href="javascript:;">我要定制</a>
+        <a href="javascript:;" class="bodyNavPhone">定制咨询电话：010-8562 8831</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="LoginInfo cssFlex">
+
+    <span>温馨提醒：</span>
+    <span> 为了保证您个人信息的安全，查看【我的定制】相关信息，需要填写定制人的【姓名】和【手机号码】北京路途科 技祝您旅途愉快。</span>
+
+  </div>
+  <div class="loginInfo">
+    <div class="loginInfoBox">
+      <p>
+        <input type="text" class="userName" placeholder="联系人姓名">
+      </p>
+      <p>
+        <input type="text" class="userPhone" placeholder="手机号码">
+      </p>
+      <div class="infoErro">联系人姓名或手机号码错误</div>
+      <div class="custonBtnInput">
+        进入我的定制
+      </div>
+    </div>
+  </div>
+
+  <div class="footerFirm">
+    <p class="firmTop">北京路途科技有限公司</p>
+    <p>Copyright 2016 Luways.com 京ICP备16044893号-2</p>
+  </div>
+  <script src="../js/ajax.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/ticketOrderPayGo.js" type="text/javascript" charset="utf-8"></script>
+
+  <script src="../js/scroll.js" type="text/javascript" charset="utf-8"></script>
+
+  <script type="text/javascript">
+    //			滚动条样式
+    $(document).ready(
+      function () {
+        $("html").niceScroll({
+          cursorcolor: "#ff9600", // 改变滚动条颜色，使用16进制颜色值
+          cursoropacitymax: 1, // 当滚动条是显示状态时改变透明度, 值范围 1 到 0
+          cursorborder: "none", // CSS方式定义滚动条边框
+          autohidemode: true, // 隐藏滚动条的方式, 可用的值: 
+          background: "transparent", // 轨道的背景颜色
+          scrollspeed: 60, // 滚动速度
+          cursorwidth: "8px", // 滚动条的宽度，单位：便素
+          mousescrollstep: 20, // 鼠标滚轮的滚动速度 (像素)
+          cursorminheight: 10, // 设置滚动条的最小高度 (像素)
+          preventmultitouchscrolling: true // 防止多触点事件引发滚动
+        })
+      }
+    );
+
+    $(".custonBtnInput").click(function () {
+      //	获取文本内容
+      var username = $(".userName").val();
+      var userPhone = $(".userPhone").val();
+
+      // if(!checkUserNameOnly() || !checkUserName()) {
+
+      if (userPhone == "" || username == '') {
+        $(".infoErro").html("联系人和手机号不能为空")
+        return false;
+      } else {
+        $(".infoErro").html("")
+      }
+      var params = {};
+      params.username = username
+      params.password = userPass
+      $.ajax({
+        url: loginServer,
+        type: "POST",
+        dataType: "json",
+        sync: true,
+        data: params,
+        xhrFields: {
+          withCredentials: true
+        },
+        traditional: true,
+
+        success: function (data) {
+          console.log(data)
+
+          if (data.success) {
+            $(".infoErro").html('')
+            window.location.href = "custom.html"
+          } else {
+            $(".infoErro").html('账号或者密码错误请重新输入')
+          }
+          var userInfo = {
+            companyName: data.data.company.name, //公司名称
+            userEmail: data.data.email, // 个人邮箱
+            companyAddress: data.data.company.address,
+            companyLink: data.data.company.link,
+            companyTel: data.data.company.tel,
+            companyFax: data.data.company.fax,
+            companyDescription: data.data.company.description,
+          }
+          var userDataJson = JSON.stringify(userInfo)
+          localStorage.setItem("userData", userDataJson)
+
+          sessionStorage.setItem("name", data.data.username)
+          sessionStorage.setItem("mobile", data.data.mobile)
+
+
+        },
+        error: function () {
+
+        }
+
+      });
+
+    })
+    // 键盘点击事件
+    $(document).keyup(function (event) {
+      if (event.keyCode == 13) {
+        $("#sign").trigger("click");
+      }
+    });
+  </script>
+</body>
+
+</html>

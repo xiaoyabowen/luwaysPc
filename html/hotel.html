@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>路途-专注于境外目的地产品</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<!--[if lte IE 9]>
+		<script src="https://cdn.bootcss.com/html5shiv/3.6/html5shiv.min.js"></script>
+		<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+		<![endif]-->
+
+		<!--[if lte IE 8]>
+	    <div class="text-xs-center m-b-0 bg-blue-grey-100 alert">
+	        <button type="button" class="close" aria-label="Close" data-dismiss="alert">
+	            <span aria-hidden="true">×</span>
+	        </button>
+	        	你正在使用一个 <strong>过时</strong> 的浏览器。请 <a href=https://browsehappy.com/ target=_blank style="color:#FF9600;">升级您的浏览器</a>，以提高您的体验。
+	    </div>
+	    <![endif]-->
+		<!--网页logo-->
+		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/hotel.css"/>
+		<link rel="stylesheet" href="../css/page.css">
+		<script src="../js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/page.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.m-style .active{
+				background: #ff9600 !important;
+				border: 1px solid #ff9600 !important;
+			}
+			.m-style a:hover{
+				background: #ff9600 !important;
+			}
+			.hotelTab>li.hotelTabImgO>a:after{
+			    width: 100%!important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--头部-->
+		<!--<div class="bodyHeader">
+			<div class="subBodyHeader cssFlex headerSubCommon">
+				<div class="comNavLogo">
+					<a href="../index.html"><img src="../images/nav_logo.png" id="logoImg" /></a>
+				</div>
+				<div class="bodyNav cssFlex">
+					<a href="../index.html" class="bodyNavImgOne bodyNavActive"><span>首页</span></a>
+					<a href="myOrder.html" class="bodyNavImgTwo"><span>我的订单</span></a>
+					<a href="shoppingCar.html" class="bodyNavImgThree"><span>购物车</span></a>
+					<a href="myCollection.html" class="bodyNavImgFour"><span>收藏</span></a>
+					<a href="personalCenter.html" class="bodyNavImgFive">
+						<span>Luways</span>
+						<div class="LoginNavPup">
+							<p>个人中心</p>
+							<p>退出</p>
+						</div>
+					</a>
+
+					<a href="javascript:;" class="bodyNavImgEmail">info@luways.com</a>
+					<a href="javascript:;" class="bodyNavImgPhone">010-8562 8831</a>
+				</div>
+			</div>
+		</div>-->
+
+		<!--初始tab  酒店 全部信息-->
+		<div class="hotelContent headerSubCommon">
+			<ul class="hotelTab cssFlex">
+				<li class="hotelTabImgO"><a href="hotel.html">酒店</a></li>
+				<li class="hotelTabImgT"><a href="ticket.html">当地玩乐</a></li>
+				<!--<li class="hotelTabImgTh"><a href="local.html">当地玩乐</a></li>-->
+			</ul>
+			<!--面包屑导航-->
+			<div class="hotelNavBread">
+				您在这里：<a href="../index.html">首页</a>&nbsp;>&nbsp;<span>酒店</span>
+				<!--您在这里：首页&nbsp;>&nbsp;酒店&nbsp;>&nbsp;<span class="hotelNavBreadTitle">曼谷艾塔斯酒店式公寓</span>-->
+			</div>
+			<!--目的地-->
+			<div class="hotelDestination cssFlex">
+				<span>目的地</span>
+				<div class="hotelDestinationInput hotelDestinationInputPosi">
+					<input type="text" name="hotelDestinationInput" id="hotelDestinatinInput" value="" placeholder="曼谷艾塔斯酒店式公寓" onkeyup="searchSuggestHotel(this);" />
+					<ul class="keywords_list keywords_list_hotelDetal">
+
+					</ul>
+				</div>
+				<span>国籍</span>
+				<div class="hotelDestinationInput">
+					<input type="text" name="" id="hotelNationalityInput" value="中国" placeholder="中国" readonly />
+				</div>
+
+				<span>入住时间</span>
+				<div class="hotelDestinationInput">
+					<input type="text" name="hotelCheckInDate" id="hotelCheckInDate" value="" placeholder="2018-07-02" readonly />
+					<!--<span id="caledarFateWeek">周一</span>-->
+					<img src="../images/icon/search_hotel_icon_calendar.png" id="caledarFateImg" alt="日期表"/>
+				</div>
+				<span>--</span>
+				<div class="hotelDestinationInput">
+					<input type="text" name="hotelCheckOutDate" id="hotelCheckOutDate" value="" placeholder="2018-07-02"  readonly/>
+					<!--<span id="caledarFateWeek">周一</span>-->
+					<img src="../images/icon/search_hotel_icon_calendar.png" id="caledarFateImg" alt="日期表"/>
+				</div>
+			</div>
+			<!--入住的人数-->
+			<div class="hotelCheckPeople cssFlex">
+				<span>成人</span>
+				<div class="hotelDestinationInput">
+					<input type="text" name="hotelCheckPeopleNum" id="hotelCheckPeopleNum" value="2" aria-valuemax="10" />
+					<img src="../images/icon/content_search_nationality_arrow.png" id="arrowUp" alt="下拉箭头" onclick="showAdhotel('sub')" />
+					<img src="../images/icon/content_search_nationality_arrow.png" id="arrowOut" alt="下拉箭头" onclick="showAdhotel('sum')" />
+				</div>
+				<span>儿童</span>
+				<div class="hotelDestinationInput">
+					<input type="text" name="hotelCheckPeopleNum" id="hotelCheckPeopleNumChil" readonly value="0" />
+					<img src="../images/icon/content_search_nationality_arrow.png" id="arrowUp" alt="下拉箭头" onclick="showAdchil('sub')" />
+					<img src="../images/icon/content_search_nationality_arrow.png" id="arrowOut" alt="下拉箭头" onclick="showAdchil('sum')" />
+				</div>
+
+				<div class="childrenAges">
+
+				</div>
+
+				<span>房间</span>
+				<div class="hotelDestinationInput">
+					<input type="text" name="hotelCheckPeopleRoom" id="hotelCheckPeopleRoom" class="addNumInputCommon" placeholder="一间" maxlength="3" onkeyup="value=value.replace(/[^\d]/g,'')" value="1" />
+					<img src="../images/icon/content_search_nationality_arrow.png" id="arrowUp" alt="下拉箭头" onclick="showRoom('sub')" />
+					<img src="../images/icon/content_search_nationality_arrow.png" id="arrowOut" alt="下拉箭头" onclick="showRoom('sum')" />
+				</div>
+				<button class="hotelCheckPeopleSerch"></button>
+			</div>
+			<!--================价格范围区间进行选择-->
+			<div class="hotelTypeSelection">
+				<div class="hotelTypeSelectionRange cssFlex">
+					<div class="hotelTypeSelectionRangeLeft justify">价格范围：</div>
+					<ul class="cssFlex hotelTypeSelectionUl">
+						<li class="hotelTypeSelectionRangeLeftActive">不限</li>
+						<li data-price="400">400元以下</li>
+						<li data-price="800">400-800元</li>
+						<li data-price="1200">800-1200元</li>
+						<li data-price="1800">1200-1800元</li>
+						<li data-price="2200">1800-2200元</li>
+						<li data-price="2300">2200元以上</li>
+					</ul>
+				</div>
+				<div class="hotelTypeSelectionRange cssFlex hotelTypeSubHeight">
+					<div class="hotelTypeSelectionRangeLeft " style="opacity: 0;">价格范围</div>
+					<span>输入范围：</span>
+					<div class="hotelDestinationInput hotelDestinationInput26">
+						<input type="text" name="hotelInputRangeStart" id="hotelInputRangeStart"  maxlength="5" onkeyup="value=value.replace(/[^\d]/g,'')" value="" />
+					</div>
+					<span>至</span>
+					<div class="hotelDestinationInput hotelDestinationInput26">
+						<input type="text" name="hotelInputRangeEnd" id="hotelInputRangeEnd"  maxlength="5" onkeyup="value=value.replace(/[^\d]/g,'')" value="" />
+					</div>
+					<button class="hotelCheckPeopleSerch hotelTypeSelectionRangeSearch">确定</button>
+				</div>
+				<div class="hotelTypeSelectionRange cssFlex">
+					<div class="hotelTypeSelectionRangeLeft justify">星级：</div>
+					<ul class="cssFlex hotelTypeStarUl">
+						<li class="hotelTypeSelectionRangeLeftActive">不限</li>
+						<li data-starId="2">二星/经济</li>
+						<li data-starId="3">三星/舒适</li>
+						<li data-starId="4">四星/高档</li>
+						<li data-starId="5">五星/豪华</li>
+					</ul>
+				</div>
+				<div class="hotelTypeSelectionRange cssFlex">
+					<div class="hotelTypeSelectionRangeLeft justify">设施：</div>
+					<ul class="cssFlex">
+						<li class="hotelTypeSelectionRangeLeftActive">不限</li>
+						<li>大床房</li>
+						<li>标准间</li>
+						<li>有线/wifi</li>
+						<li>附近交通</li>
+						<li>停车场</li>
+						<li>健身房</li>
+						<li>Span</li>
+						<li>游泳池</li>
+						<li>餐厅</li>
+					</ul>
+				</div>
+
+			</div>
+			<!--================价格范围区间进行选择结束-->
+			<!--选取的酒店进行渲染展示以及根据价格/星级/综合排序进行分类展示-->
+			<ul class="hotelSive cssFlex" id="scrollPos">
+				<li class="hotelSiveActive">综合排序</li>
+				<li class="priceSortLi">
+					价格
+					<div class="priceSort">
+						<p data-priceSortId="0">从低到高</p>
+						<p data-priceSortId="1">从高到低</p>
+					</div>
+				</li>
+				<li>星级</li>
+			</ul>
+			<!--酒店展示-->
+			<div class="hotelShowAll cssFlex">
+				<div class="hotelShowAllPage">
+					<ul class="hotelShowAllPageList">
+						<div class="hotelShowAllPageListPage"></div>
+					</ul>
+					<div class="box m-style" id="box"></div>
+				</div>
+				<div class="hotelShowAllMap">
+					<!--地图定位-->
+					<!--<div class="hotelShowAllMapPosition">-->
+					<div class="hotelShowAllMapPosition" id="googleMap">
+						<!--<img src="../images/map.png"/>-->
+					</div>
+					<!--热门酒店-->
+					<p class="hotelShowAllMapHot hotelHotRelevant">热门酒店</p>
+					<ul class="hotelHot">
+						<!--<li>
+							<div class="hotelShowAllMapImg">
+								<img src="../images/new_hotel_img.png" alt="热门酒店"/>
+							</div>
+							<h4>艾塔斯酒店</h4>
+							<p>房间类型：BB/RO</p>
+							<p class="hotelShowAllMapHotPrice">¥558.88起</p>
+						</li>-->
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<script>
+            /*function myMap() {
+                var list = JSON.parse('${coordinateJson}');
+                if (list != null) {
+                    var options = {
+                        zoom: 12,
+                        center: new google.maps.LatLng(list[0].coordinates.latitude, list[0].coordinates.longitude),
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    };
+                    var map = new google.maps.Map(document.getElementById('googleMap'), options);
+                    for (var i = 0; i < list.length; i++) {
+                        var marker = new google.maps.Marker({
+                            position: new google.maps.LatLng(list[i].coordinates.latitude, list[i].coordinates.longitude),
+                            map: map,
+                            title: list[i].name
+//                icon:"/res/img2.0/bed.png"
+                        });
+
+
+                    }
+                }
+
+            }*/
+		</script>
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/ajax.js" type="text/javascript" charset="utf-8"></script>
+
+		<!--<script src="http://ditu.google.cn/maps/api/js?key=AIzaSyC7heZZEeL7U1dYsUW9AJgFIKwXrGeuuFA"></script>-->
+		<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=WP263j3sgyOeMZCWA8luf4Q8VSTsQ6AN"></script>
+		<script src="../js/project.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/hotel.js" type="text/javascript" charset="utf-8"></script>
+		<!--自定义滚动条插件-->
+		<script src="../js/scroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/laydate/laydate.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+
+            $(function () {
+                $(".keywords_list").niceScroll({
+                    cursorcolor: "#ff9600", // 改变滚动条颜色，使用16进制颜色值
+                    cursoropacitymax: 1, // 当滚动条是显示状态时改变透明度, 值范围 1 到 0
+                    cursorborder: "none", // CSS方式定义滚动条边框
+                    autohidemode: true, // 隐藏滚动条的方式, 可用的值:
+                    background: "transparent", // 轨道的背景颜色
+                    scrollspeed: 60, // 滚动速度
+                    cursorwidth: "8px", // 滚动条的宽度，单位：便素
+                    mousescrollstep: 20, // 鼠标滚轮的滚动速度 (像素)
+                    cursorminheight: 10, // 设置滚动条的最小高度 (像素)
+                    preventmultitouchscrolling: true // 防止多触点事件引发滚动
+                })
+                // 默认选择今天的日期
+                $("#hotelCheckInDate").attr("value",s2)
+                // 默认选择明天的日期
+                $("#hotelCheckOutDate").attr("value",s3)
+            })
+
+
+			//日期选择器
+			$(function(){
+//				入住時間
+				laydate.render({
+					elem: '#hotelCheckInDate',
+					min: 0,
+					max : 30,  // 最大日期
+					showBottom: false,
+					calendar: true,
+                    istoday: true,
+					theme: '#ff9600'
+				});
+//				退房时间
+				laydate.render({
+					elem: '#hotelCheckOutDate',
+					min: 0,
+					max : 30,  // 最大日期
+					showBottom: false,
+					calendar: true,
+                    istoday: true,
+					theme: '#ff9600'
+				});
+
+			})
+			// 价格下拉
+			$(".priceSortLi").hover(function () {
+				$(".priceSort").stop().slideDown()
+            },function () {
+                $(".priceSort").stop().slideUp()
+            })
+
+
+		</script>
+
+	</body>
+
+</html>

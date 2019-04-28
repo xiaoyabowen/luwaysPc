@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>路途-专注于境外目的地产品</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<!--[if lte IE 9]>
+		<script src="https://cdn.bootcss.com/html5shiv/3.6/html5shiv.min.js"></script>
+		<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+		<![endif]-->
+
+		<!--[if lte IE 8]>
+	    <div class="text-xs-center m-b-0 bg-blue-grey-100 alert">
+	        <button type="button" class="close" aria-label="Close" data-dismiss="alert">
+	            <span aria-hidden="true">×</span>
+	        </button>
+	        	你正在使用一个 <strong>过时</strong> 的浏览器。请 <a href=https://browsehappy.com/ target=_blank style="color:#FF9600;">升级您的浏览器</a>，以提高您的体验。
+	    </div>
+	    <![endif]-->
+		<!--网页logo-->
+		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/myOrder.css"/>
+		<link rel="stylesheet" type="text/css" href="../js/icheck/skins/square/yellow.css"/>
+		<script src="../js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/icheck/icheck.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+
+	<body>
+		<!--订单详情-->
+		<div class="myOrderTabInfo headerSubCommon cssFlex">
+			<!--订单用户信息-->
+			<div class="myOrderUser">
+				<div class="myOrderUserIcon">
+					<img src="../images/userIMg.jpg" class="myOrderUserIconImg" alt="用户头像"/>
+
+				</div>
+				<p class="centerComName">风儿吹</p>
+				<div class="myOrderALL cssFlex">
+					<div class="myOrderALLNum">
+						<p>订单总数</p>
+						<p class="myOrderAllnNumber">100</p>
+					</div>
+					<div class="myOrderALLNum">
+						<p>购物车</p>
+						<p class="myOrderShoppingCart">100</p>
+					</div>
+				</div>
+			</div>
+			
+			<!--订单  tab-->
+			<div class="myOrderUserTab">
+				<ul class="cssFlex myOrderUserTabLi">
+					<li>
+						<a href="myOrder.html" class=" myOrderUserImgOne"><span>我的订单</span></a>
+					</li>
+					<li>
+						<a href="shoppingCar.html" class="myOrderUserImgTwo"><span>购物车</span></a>
+					</li>
+					<li>
+						<a href="myCollection.html" class="myOrderUserImgThree"><span>酒店收藏</span></a>
+					</li>
+					<li class="myOrderALLHoverUp">
+						<a class="myOrderUserTabActive myOrderUserImgoFour"><span>账户信息</span>
+							<div class="myOrderTabUp">
+								<p class="userPerson fontColorActive" >个人信息</p>
+								<p class="userCompony">公司信息</p>
+								<p class="userPass">密码重置</p>
+								<p>头像设置</p>
+							</div>
+						</a>
+
+					</li>
+				</ul>
+				
+				
+				
+				<div class="centerMain">
+					<!--个人信息栏    -->
+					<div class="userCenter personal" data-id="0" style="display: block;">
+						<p class="cssFlex">
+							<span class="justify">账号</span>
+							<input type="text" name="userName" id="userName" placeholder="用户名" readonly />
+							<img src="../images/icon/true.png" alt="" class="userNameTrue">
+				            <img src="../images/icon/del.png" alt="错误信息" class="del-userName">
+				            <span id="judgeUserName"></span>
+						</p>
+						<p class="cssFlex">
+							<span class="justify">手机号码</span>
+							<input type="text" name="userPhone" id="userPhone" value="" placeholder="电话"readonly />
+							<img src="../images/icon/true.png" alt="" class="userPhoneTrue">
+				            <img src="../images/icon/del.png" alt="错误信息" class="del-userPhone">
+				            <span id="judgePhone"></span>
+						</p>
+						<p class="cssFlex">
+							<span class="justify">电子邮箱</span>
+							<input type="text" name="userEmail" id="userEmail" value="" placeholder="邮箱" readonly/>
+							<img src="../images/icon/true.png" alt="" class="userEmailTrue">
+				            <img src="../images/icon/del.png" alt="错误信息" class="del-userEmail">
+				            <span id="judgeEmail"></span>
+						</p>
+						<!--<a class="sucssBtn userCenterBtn">
+							<span data-tit="提交 >">提交</span>
+						</a>-->
+					</div>
+					
+
+				</div>
+			</div>
+			<!--订单详细信息-->
+			
+		</div>
+		<!--有订单-->
+		
+		
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/ajax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/project.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/myOrder.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/scroll.js" type="text/javascript" charset="utf-8"></script>
+
+		<style type="text/css">
+			.myOrderUserTabActive>span:after{
+				width: 17px;
+				left: 6px;
+				height: 17px;
+				background:url(../images/icon/icon_user.png) center bottom no-repeat;
+			}
+			.bodyNavImgFive>span{
+				color: #FF9600;
+			}
+			.bodyNavImgFive>span:after{
+				width: 9px;
+				height: 5px;
+				right: 16px;
+				top: 64px;
+				background:url(../images/icon/icon_up.png) center bottom no-repeat;
+			}
+			.bodyNavImgFive:after{
+				content: '';
+				display: block;
+				position: absolute;
+				top: 56px;
+			    left: 8px;
+			    width: 15px;
+			    height: 18px;
+				transition: all 0.5s;
+				background: url(../images/icon/icon_user.png) center bottom no-repeat;
+			}
+		</style>
+		<script type="text/javascript">
+//			选框
+			$(document).ready(function(){
+			  $('input.myOrderHaveCheck').iCheck({
+			    checkboxClass: 'icheckbox_square-yellow',
+			    radioClass: 'iradio_square-yellow',
+			    increaseArea: '10%' // optional
+			  });
+			});	
+			
+//			下拉菜单
+			$(".myOrderALLHoverUp").hover(function(){
+			    $(".myOrderTabUp").stop().show();
+			    },function(){
+			    $(".myOrderTabUp").stop().hide();
+			 });
+//账户信息   跳转页面
+
+
+$(".userPerson").click(function () {
+    window.location.href = "../html/personalCenter.html"
+})
+
+$(".userCompony").click(function () {
+    window.location.href = "../html/personCenterCom.html"
+})
+
+$(".userPass").click(function () {
+    window.location.href = "../html/personCenterPass.html"
+})
+
+		</script>
+	</body>
+
+</html>

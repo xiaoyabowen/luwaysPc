@@ -1,0 +1,398 @@
+.serverPhone:hover{
+	color: #333 !important;
+}
+/*平台服务头部样式*/
+.bodyNav>p{
+	color: #FF9600;
+}
+.bodyNav>p>a{
+	color: #FF9600;
+	padding: 0 10px;
+}
+.bodyNavPhone{
+	background: url(../images/icon/phoneNv.png) no-repeat 6px center;
+}
+.platFormTabActive:after{
+	width: 100% !important;
+	left: 0 !important;
+}
+
+/*平台服务*/
+.platForm{
+	width: 678px;
+	margin: 30px auto 120px;
+}
+.platForm>ul>li{
+	width: 95px;
+	margin-right: 100px;
+	font-weight: bold;
+	position: relative;
+	text-align: center;
+	cursor: pointer;
+}
+.platForm>ul>li>a{
+	display: block;
+	font-size: 18px;
+	height: 50px;
+}
+.platForm>ul>li>a:after{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 3px;
+	background: #FF9600;
+	left: 50%;
+	bottom: 8px;
+	transition: all .5s;
+}
+.platForm>ul>li:hover a:after{
+	transition: all .5s;
+	width: 100px;
+	left: 0;
+}
+.platForm>ul>li:last-of-type{
+	margin-right: 0;
+}
+.platForm>ul>li>a:hover{
+	color: #FF9600;
+	transition: .3s;
+}
+.platFormTabActive{
+	color: #FF9600;
+}
+
+.myOrderALLHoverUp>a>div{
+	display: none;
+	position: absolute;
+	top: 44px;
+    left: 0px;
+    text-align: center;
+    background:rgba(255,255,255,1);
+	border:1px solid rgba(222,222,222,1);
+	border-top: none;
+	width:98px;
+	font-weight: normal;
+}
+.myOrderALLHoverUp>a>div>p{
+	display: block;
+	line-height: 30px; 
+	padding: 0 4px;
+	font-size: 16px;
+	color: #333;
+}
+.myOrderALLHoverUp>a>div>p:hover{
+	color: #FF9600;
+	transition: .3s;
+}
+
+.featuresText{
+	font-size: 16px;
+	color: #666;
+	line-height: 28px;
+	text-indent: 30px;
+}
+.featuresTextBto{
+	margin-bottom: 30px;
+}
+
+.featuresTextBootom{
+	margin-bottom: 390px;
+}
+
+.cooperation {
+	margin-bottom:80px;
+}
+
+.swiper-slide>img {
+	width: 1200px;
+	display: block;
+	margin: 64px auto 0;
+	padding-bottom: 40px;
+}
+
+.swiper-pagination-bullet{
+    width: 10px !important;
+    height: 10px !important;
+    display: inline-block !important;
+    border-radius: 100% !important;
+    background: #fff !important;
+    /*opacity: .2;*/
+   	border: 1px solid rgba(0,0,0,0.2) !important;
+}
+.swiper-pagination-bullet-active {
+    opacity: 0.2 !important;
+    background: #000 !important;
+}
+
+/*关于业务*/
+
+.fontSupplier{
+	text-indent: 28px;
+	line-height: 24px;
+}
+
+.hotelShowAllMapHot{
+	font-size: 18px;
+	padding-left: 10px;
+	position: relative;
+	margin: 15px 0;
+	color: #FF9600 !important;
+	text-indent: initial !important;
+}
+.hotelShowAllMapHot::before{
+	display: inline-block;
+	content: '';
+	width: 4px;
+	height: 20px;
+	background:rgba(255,150,0,1);
+	position: absolute;
+    left: 0;
+    top: 4px;
+}
+.platFormStickInfo{
+	margin: 20px 0 120px 0;
+}
+.platFormStickInfo>p{
+	line-height: 28px;
+}
+
+.platFormStickInfo>p>span{
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	line-height: 28px;
+	border-radius: 50%;
+	text-align: center;
+	background: #ffb751;
+	margin-right: 18px;
+}
+
+.platFormStick,.platFormStickAc{
+	display: block;
+	width: 8px;
+	height: 16px;
+	margin-left: 10px;
+	background: #ffb751;
+}
+.platFormStickAc{
+	height: 20px !important;
+}
+
+/*合作方式*/
+
+.hexagon1{
+    width: 50px;
+    height: 80px;
+    background-color:#6c6 ;
+    position: relative;
+    margin:0 auto;
+}
+.hexagon1::before{
+    width: 0;
+    height: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    left:-20px;
+    border-right: 20px solid #6c6;
+    border-top:40px solid transparent;
+    border-bottom:40px solid transparent;
+}
+.hexagon1::after{
+    width: 0;
+    height: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    right:-20px;
+    border-left: 20px solid #6c6;
+    border-top:40px solid transparent;
+    border-bottom:40px solid transparent;
+}
+
+
+/*关于路途   --  合作伙伴*/
+.aboutParterSwiper{
+	width: 1200px;
+	margin: 300px auto 130px;
+}
+.swiper-slide>img{
+	display: block;
+	width: 100%;
+}
+.platFormAll{
+	margin-bottom: 500px;
+}
+
+/*联系我们*/
+.contactContent{
+	margin: 60px auto 130px;
+}
+.contactContent>p{
+	line-height: 30px;
+}
+.contactMap{
+	width: 745px;
+	height: 290px;
+	margin: 20px 0;
+}
+.contactMap>img{
+	display: block;
+	width: 100%;
+}
+
+
+/*文件资质*/
+.file{
+	display: block;
+	width: 610px;
+	height: 840px;
+	margin: 60px auto;
+}
+
+
+/*平台特色*/
+.shopFesature,.API{
+	margin-bottom: 130px;
+	text-align: center;
+}
+.shopFesature>h2{
+	text-align: center;
+	margin: 90px auto 70px;
+	font-size: 30px;
+	color: #666;
+}
+.shopFesatureTextMain{
+	width: 160px;
+	height: 260px;
+	margin-right: 40px;
+}
+.fetureSixImg{
+	display: block;
+	width: 160px;
+}
+.shopFesatureTextMain:last-of-type{
+	margin-right: 0;
+}
+.shopFesatureTextMain>h5{
+	font-size: 18px;
+	color: #333;
+	margin-top: -172px;
+	margin-bottom: 14px;
+}
+.shopFesatureTextMain>p{
+	color: #666;
+	line-height: 26px;
+	padding: 0 15px;
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+}
+
+/*标准API*/
+.API{
+	width: 390px;
+	height: 260px;
+}
+.API>h4{
+	font-size: 20px;
+	color: #333333;
+	margin-top: -174px;
+	margin-bottom: 12px;
+}
+.API>p{
+	padding: 0 10px;
+	color: #666;
+	line-height: 26px;
+}
+
+/*业务介绍里面的合作方式*/
+.channelContent{
+	margin-bottom:130px;
+}
+.channelImg{
+	width: 880px;
+	margin: 0 auto 30px;
+}
+.channelImg>img{
+	display: block;
+	width: 100%;
+}
+.channelContent>p{
+	line-height: 30px;
+	color: #333;
+	margin-bottom: 20px;
+}
+.subTitle{
+	margin-bottom: 60px;
+}
+.Title{
+	font-size: 30px;
+	text-align: center;
+	color: #666666;
+	margin-bottom: 50px;
+}
+.TitleText{
+	line-height: 18px !important;
+}
+
+
+/*业务介绍   服务内容*/
+.platFormContent,.contactContent{
+	margin-bottom: 130px;
+}
+.platFormContent>p,.contactContent>p,.HelpContent>p{
+	color: #333;
+	line-height: 28px;
+	text-indent: 32px;
+}
+.commonBuss>li{
+	color: #999;
+	line-height: 28px;
+	text-indent: 32px;
+}
+
+
+.HelpContent{
+	margin: 60px auto 530px !important;
+}
+
+
+.textIndent{
+	text-indent: 0px !important;
+}
+
+.fontColorActive{
+	color: #ff9600 !important;
+}
+
+.platFormStickActive{
+	display: inline-block;
+	border-radius: 0 !important;
+	width: 8px;
+	height: 20px;
+	margin-left: 10px;
+	background: #ffb751;
+	margin-right: 108px;
+}
+.platFormMarginB{
+	margin-top: -10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

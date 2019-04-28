@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>路途-专注于境外目的地产品</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<!--[if lte IE 9]>
+		<script src="https://cdn.bootcss.com/html5shiv/3.6/html5shiv.min.js"></script>
+		<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+		<![endif]-->
+
+		<!--[if lte IE 8]>
+	    <div class="text-xs-center m-b-0 bg-blue-grey-100 alert">
+	        <button type="button" class="close" aria-label="Close" data-dismiss="alert">
+	            <span aria-hidden="true">×</span>
+	        </button>
+	        	你正在使用一个 <strong>过时</strong> 的浏览器。请 <a href=https://browsehappy.com/ target=_blank style="color:#FF9600;">升级您的浏览器</a>，以提高您的体验。
+	    </div>
+	    <![endif]-->
+		<!--网页logo-->
+		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/myOrder.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="../css/layer.css"/>-->
+		<!--<link rel="stylesheet" type="text/css" href="../js/icheck/skins/square/yellow.css"/>-->
+		<script src="../js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+
+		
+	</head>
+
+	<body>
+		<!--订单详情-->
+		<div class="myOrderTabInfo headerSubCommon cssFlex">
+			<!--订单用户信息-->
+			<div class="myOrderUser">
+				<div class="myOrderUserIcon">
+					<img src="../images/userIMg.jpg" class="myOrderUserIconImg" alt="用户头像"/>
+				</div>
+				<p class="centerComName">风儿吹</p>
+				<div class="myOrderALL cssFlex">
+					<div class="myOrderALLNum">
+						<p>订单总数</p>
+						<p class="myOrderAllnNumber">100</p>
+					</div>
+					<div class="myOrderALLNum">
+						<p>购物车</p>
+						<p class="myOrderShoppingCart">100</p>
+					</div>
+				</div>
+			</div>
+			
+			<!--订单  tab-->
+			<div class="myOrderUserTab">
+				<ul class="cssFlex myOrderUserTabLi">
+					<li>
+						<a href="myOrder.html" class="myOrderUserTabActive myOrderUserImgOne"><span>我的订单</span></a>
+					</li>
+					<li>
+						<a href="shoppingCar.html" class="myOrderUserImgTwo"><span>购物车</span></a>
+					</li>
+					<li>
+						<a href="myCollection.html" class="myOrderUserImgThree"><span>酒店收藏</span></a>
+					</li>
+					<li class="myOrderALLHoverUp">
+						<a  href="javascript:;" class="myOrderUserImgoFour"><span>账户信息</span>
+							<div class="myOrderTabUp">
+								<p class="userPerson">个人信息</p>
+								<p class="userCompony">公司信息</p>
+								<p class="userPass">密码重置</p>
+								<p>头像设置</p>
+							</div>
+						</a>
+
+					</li>
+				</ul>
+				<!--我的订单状态-->
+				<div class="myOrderQuery cssFlex">
+					<span>商品名称</span>
+					<input type="text" name="myOrderInfoName" id="myOrderInfoName" />
+					<span>订单编号</span>
+					<input type="text" name="myOrderInfoNum" id="myOrderInfoNum" />
+					<span>订单状态</span>
+					<!--<div class="select selectOrder">
+						<i></i>
+						<span class="checkOrder">点击下拉框选择</span>
+						<ul>
+							<li>全部</li>
+						</ul>
+					</div>-->
+					<div class="select selectOrder">
+						<p data-value="">全部</p>
+						<ul>
+
+							<li data-value="0" class="Selected">待支付</li>
+							<li data-value="1">已支付</li>
+							<!--<li data-value="2">未发voucher</li>
+							<li data-value="3">已发voucher</li>-->
+							<li data-value="7">支付成功待确认</li>
+							<li data-value="8">确认失败</li>
+							<li data-value="9">确认成功</li>
+							<li data-value="16">确认中</li>
+							<li data-value="13">异常</li>
+							<li data-value="10">取消</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="myOrderdate cssFlex">
+					<span class="justify">日期</span>
+					<!--<div class="select selctDate">
+						<i></i>
+						<span class="checkDate">选择时间段</span>
+						<ul>
+							<li data-dateId="1">出行日期</li>
+							<li data-dateId="2">下单日期</li>
+						</ul>
+					</div>-->
+					<div class="select selectUp">
+						<p data-value="1">出行日期</p>
+						<ul>
+							<li data-value="1" class="Selected">出行日期</li>
+							<li data-value="2">下单日期</li>
+						</ul>
+					</div>
+					<p>
+						<input type="text" name="myOrderStart" id="myOrderStart" value="" placeholder="下单日期" />
+						<img src="../images/icon/search_hotel_icon_calendar.png" id="searchHotelImg" alt="选择日期" />
+					</p>
+					<i class="myOrderdateSpan">--</i>
+					<p>
+						<input type="text" name="myOrderEnd" id="myOrderEnd" value="" placeholder="使用日期" />
+						<img src="../images/icon/search_hotel_icon_calendar.png" id="searchHotelImg" alt="选择日期" />
+					</p>
+<!--					<input type="checkbox" class="checkInputCheck">-->
+
+					<!--<input type="hidden" class="skuId">-->
+					<!--<input type="hidden" class="adult">
+					<input type="hidden" class="yong">
+					<input type="hidden" class="child">
+					<input type="hidden" class="baby">
+					<input type="hidden" class="Old">
+					<input type="hidden" class="price">-->
+					<input type="hidden" class="tickerCheckInDate">
+					<input type="hidden" class="thumbnailUrl">
+
+					<button class="tickerCheckPeopleSerch tickerCheckOrder"></button>
+				</div>
+				
+			</div>
+			
+			<!--订单详细信息-->
+			
+			
+		</div>
+		<!--有订单-->
+		<div class="myOrderHave headerSubCommon" id="myOrderId">
+			<!--有订单表格列表-->
+			<table class="myOrderHaveTable">
+
+				
+			</table>
+			
+		</div>
+		<div class="myOrderNull headerSubCommon" style="display: none;">
+			<!--无订单-->
+			<div class="myOrderNullImgOrder middle">
+				<img src="../images/noOrder.png" alt="没有订单"/>
+				<span>亲 您还没有任何订单</span>
+			</div>
+		</div>
+
+
+		<!--删除 按钮  弹出框-->
+		<div class="dialogue-mask">
+			<div class="dialogue-container">
+
+				<div class="dialogue-content border-bottom">
+					<img src="../images/modelDelete.png" alt="">
+					<div class="dialogue-btn clear-float">
+						<div class="dialogue-sure">
+							确认
+						</div>
+						<div class="dialogue-cancel">
+							取消
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<script src="../js/ajax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/myOrder.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/scroll.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="../js/laydate/layer.js" type="text/javascript" charset="utf-8"></script>-->
+
+		<script src="../js/laydate/laydate.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="../js/icheck/icheck.js" type="text/javascript" charset="utf-8"></script>-->
+		<style type="text/css">
+			.myOrderUserTabActive>span:after{
+				width: 17px;
+				left: 6px;
+				height: 17px;
+				background: url(../images/icon/icon_order.png) no-repeat center bottom;
+			}
+			.bodyNavImgTwo>span{
+				color: #FF9600;
+			}
+			.bodyNavImgTwo>span:after{
+				width: 14px;
+				height: 17px;
+				left: 9px;
+				background:url(../images/icon/icon_order.png) center bottom no-repeat;
+			}
+		</style>
+		<script type="text/javascript">
+
+//			选框
+			/*$(document).ready(function(){
+			  $('input.myOrderHaveCheck').iCheck({
+			    checkboxClass: 'icheckbox_square-yellow',
+			    radioClass: 'iradio_square-yellow',
+			    increaseArea: '10%' // optional
+			  });
+			});	*/
+			laydate.render({
+				elem: '#myOrderStart',
+				max : 0,  // 最大日期
+				showBottom: false,
+				calendar: true,
+				theme: '#ff9600'
+			});
+			laydate.render({
+				elem: '#myOrderEnd',
+				max : 0,  // 最大日期
+				showBottom: false,
+				calendar: true,
+				theme: '#ff9600'
+			});
+			
+//			下拉菜单
+			$(".myOrderALLHoverUp").hover(function(){
+				$(".myOrderTabUp").slideToggle();
+			})
+//账户信息   跳转页面
+
+$(".userPerson").click(function () {
+    window.location.href = "../html/personalCenter.html"
+})
+
+$(".userCompony").click(function () {
+    window.location.href = "../html/personCenterCom.html"
+})
+
+$(".userPass").click(function () {
+    window.location.href = "../html/personCenterPass.html"
+})
+			
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>路途-专注于境外目的地产品</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<!--[if lte IE 9]>
+		<script src="https://cdn.bootcss.com/html5shiv/3.6/html5shiv.min.js"></script>
+		<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+		<![endif]-->
+
+		<!--[if lte IE 8]>
+	    <div class="text-xs-center m-b-0 bg-blue-grey-100 alert">
+	        <button type="button" class="close" aria-label="Close" data-dismiss="alert">
+	            <span aria-hidden="true">×</span>
+	        </button>
+	        	你正在使用一个 <strong>过时</strong> 的浏览器。请 <a href=https://browsehappy.com/ target=_blank style="color:#FF9600;">升级您的浏览器</a>，以提高您的体验。
+	    </div>
+	    <![endif]-->
+		<!--网页logo-->
+		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/myOrder.css"/>
+		<link rel="stylesheet" type="text/css" href="../js/icheck/skins/square/yellow.css"/>
+		<script src="../js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+
+	<body>
+		
+		
+		<!--订单详情-->
+		<div class="myOrderTabInfo headerSubCommon cssFlex">
+			<!--订单用户信息-->
+			<div class="myOrderUser">
+				<div class="myOrderUserIcon">
+					<img src="../images/userIMg.jpg" class="myOrderUserIconImg" alt="用户头像"/>
+
+				</div>
+				<p class="centerComName">风儿吹</p>
+				<div class="myOrderALL cssFlex">
+					<div class="myOrderALLNum">
+						<p>订单总数</p>
+						<p class="myOrderAllnNumber">100</p>
+					</div>
+					<div class="myOrderALLNum">
+						<p>购物车</p>
+						<p class="myOrderShoppingCart">100</p>
+					</div>
+				</div>
+			</div>
+			
+			<!--订单  tab-->
+			<div class="myOrderUserTab">
+				<ul class="cssFlex myOrderUserTabLi">
+					<li>
+						<a href="myOrder.html" class=" myOrderUserImgOne"><span>我的订单</span></a>
+					</li>
+					<li>
+						<a href="shoppingCar.html" class="myOrderUserTabActive myOrderUserImgTwo"><span>购物车</span></a>
+					</li>
+					<li>
+						<a href="myCollection.html" class="myOrderUserImgThree"><span>酒店收藏</span></a>
+					</li>
+					<li class="myOrderALLHoverUp">
+						<a class=" myOrderUserImgoFour"><span>账户信息</span>
+							<div class="myOrderTabUp">
+								<p class="userPerson">个人信息</p>
+								<p class="userCompony">公司信息</p>
+								<p class="userPass">密码重置</p>
+								<p>头像设置</p>
+							</div>
+						</a>
+
+					</li>
+				</ul>
+				<!--我的购物车状态-->
+			
+				
+				<div class="myOrderdate myOrderShop cssFlex">
+					<span class="justify">商品名称</span>
+					<input type="text" name="myOrderName" id="myOrderName" value="" placeholder="商品名称" />
+					<button class="tickerCheckPeopleSerch tickerSerchShop"></button>
+				</div>
+
+				<!--购物车为空时    父元素height为600px  -->
+
+				<div class="myOrderNullImgBox" style="display: none;">
+					<div class="myOrderNullImg">
+						<img src="../images/noOrder.png" alt="没有订单"/>
+						<span>亲 您的购物车是空的</span>
+					</div>
+				</div>
+
+			</div>
+			
+			<!--订单详细信息-->
+			
+		</div>
+		<!--有订单-->
+		<div class="myOrderHave headerSubCommon">
+			<!--有订单表格列表-->
+			<table class="myOrderHaveTable">
+				<!--<tr>
+					<th style="width: 162px;text-align: left;" class="myOrderLabel" style="">
+						<label>
+							<input type="checkbox" class="myOrderHaveCheck" name="" id="" value="" /> 全选
+						</label>
+						<span class="myOrderDel">删除</span>
+					</th>
+					<th style="width: 370px;">名称</th>
+					<th style="width: 110px;">类型</th>
+					<th style="width: 140px;">人数</th>
+					<th style="width: 170px;">价格</th>
+					<th style="width: 210px;">操作</th>
+				</tr>
+				<tr>
+					<td><img src="../images/content_recommend_img_two.png" alt="订单图片" /></td>
+					<td style=" text-align: left;">
+						<label>
+							<input type="checkbox" class="myOrderHaveCheck"> 
+						</label>
+						<span class="myOrderMakeNum">
+							订单编号：<i>180711014458940640</i>
+						</span>
+						<p class="myOrderMakedate">
+							预定日期：<span>2018-07-11 12:47:48</span>
+						</p>
+						<h4>Heli夏威夷可爱岛之旅 </h4>
+						<p class="myOrderMakeSubTitle">Private Charter from Lihue per hour (WStar)</p>
+					</td>
+					<td>门票</td>
+					<td>
+						<p>成年：<span>2位</span></p>
+						<p>儿童：<span>2位</span></p>
+					</td>
+					<td>
+						<p class="myOrderPrice">￥55.88起</p>
+					</td>
+					<td>
+						<a class="sucssBtn myOrderBtn">
+							<span data-tit="立即预定 >">立即预定</span>
+						</a>
+						&lt;!&ndash;<button class="myOrderBtn">立即预定</button>&ndash;&gt;
+						&lt;!&ndash;<button class="myOrderBtn">立即支付</button>&ndash;&gt;
+					</td>
+				</tr>-->
+				
+				
+			</table>
+
+
+
+		</div>
+
+
+		<!--删除 按钮  弹出框-->
+		<div class="dialogue-mask">
+			<div class="dialogue-container">
+
+				<div class="dialogue-content border-bottom">
+					<img src="../images/modelDelete.png" alt="">
+					<div class="dialogue-btn clear-float">
+						<div class="dialogue-sure">
+							确认
+						</div>
+						<div class="dialogue-cancel">
+							取消
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+
+		<script src="../js/ajax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/icheck/icheck.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/shopping.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="../js/myOrder.js" type="text/javascript" charset="utf-8"></script>-->
+		<!--自定义滚动条插件-->
+		<script src="../js/scroll.js" type="text/javascript" charset="utf-8"></script>
+
+		<style type="text/css">
+			.myOrderUserTabActive span:after{
+				width: 17px;
+				left: 6px;
+				height: 17px;
+				background:url(../images/icon/icon_shop.png) center bottom no-repeat  !important;
+			}
+			.bodyNavImgThree>span{
+				color: #FF9600;
+			}
+			.bodyNavImgThree>span:after{
+				width: 18px;
+				height: 17px;
+				left: 6px;
+				background:url(../images/icon/icon_shop.png) center bottom no-repeat;
+			}
+		</style>
+		<script type="text/javascript">
+
+
+//			下拉菜单
+			$(".myOrderALLHoverUp").hover(function(){
+				$(".myOrderTabUp").slideToggle();
+			})
+
+		</script>
+	</body>
+
+</html>

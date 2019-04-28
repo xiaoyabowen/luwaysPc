@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>路途-专注于境外目的地产品</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!--[if lte IE 9]>
+		<script src="https://cdn.bootcss.com/html5shiv/3.6/html5shiv.min.js"></script>
+		<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+		<![endif]-->
+
+  <!--[if lte IE 8]>
+	    <div class="text-xs-center m-b-0 bg-blue-grey-100 alert">
+	        <button type="button" class="close" aria-label="Close" data-dismiss="alert">
+	            <span aria-hidden="true">×</span>
+	        </button>
+	        	你正在使用一个 <strong>过时</strong> 的浏览器。请 <a href=https://browsehappy.com/ target=_blank style="color:#FF9600;">升级您的浏览器</a>，以提高您的体验。
+	    </div>
+	    <![endif]-->
+  <!--网页logo-->
+  <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="../css/common.css" />
+  <link rel="stylesheet" type="text/css" href="../css/hotel.css" />
+  <script src="../js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+  <style>
+
+
+
+  </style>
+</head>
+
+<body>
+  <!-- header -->
+  <div class="bodyHeader">
+    <div class="subBodyHeader cssFlex headerSubCommon">
+      <div class="comNavLogo">
+        <a href="custom.html"><img src="../images/nav_logo.png" id="logoImg" /></a>
+      </div>
+      <div class="bodyNav cssFlex">
+        <a href="customLogin.html">我要定制</a>
+        <a href="javascript:;" class="bodyNavPhone">定制咨询电话：010-8562 8831</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="hotelShowAllMapHot RecommendTitle headerSubCommon">订单信息</div>
+  <div class="cusInfo headerSubCommon">
+    <!-- <div class="cusInfoBox cssFlex">
+      <img src="../images/hotel_img.png" alt="">
+      <div class="cusInfoMain">
+        <h3>北京-俄罗斯定制游</h3>
+        <p class="H3susb">订单编号：<span>168168161816</span> </p>
+        <p>下单日期：<span>2019-3-21</span></p>
+        <p>出行日期：<span>2019-3-21</span></p>
+        <div class="cusInfoMainDetail cssFlex">
+          <span>方案设计中报价待定</span>
+          <div class="infoDetail">订单详情</div>
+        </div>
+      </div>
+    </div>
+    <div class="cusInfoBox cssFlex">
+      <img src="../images/hotel_img.png" alt="">
+      <div class="cusInfoMain">
+        <h3>北京-俄罗斯定制游</h3>
+        <p class="H3susb">订单编号：<span>168168161816</span> </p>
+        <p>下单日期：<span>2019-3-21</span></p>
+        <p>出行日期：<span>2019-3-21</span></p>
+        <div class="cusInfoMainDetail cssFlex">
+          <span>方案设计中报价待定</span>
+          <div class="infoDetail">订单详情</div>
+        </div>
+      </div>
+    </div> -->
+
+  </div>
+
+
+  <div class="footerFirm">
+    <p class="firmTop">北京路途科技有限公司</p>
+    <p>Copyright 2016 Luways.com 京ICP备16044893号-2</p>
+  </div>
+  <script src="../js/ajax.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/ticketOrderPayGo.js" type="text/javascript" charset="utf-8"></script>
+
+  <script src="../js/scroll.js" type="text/javascript" charset="utf-8"></script>
+
+  <script type="text/javascript">
+    //			滚动条样式
+    $(document).ready(
+      function () {
+        $("html").niceScroll({
+          cursorcolor: "#ff9600", // 改变滚动条颜色，使用16进制颜色值
+          cursoropacitymax: 1, // 当滚动条是显示状态时改变透明度, 值范围 1 到 0
+          cursorborder: "none", // CSS方式定义滚动条边框
+          autohidemode: true, // 隐藏滚动条的方式, 可用的值: 
+          background: "transparent", // 轨道的背景颜色
+          scrollspeed: 60, // 滚动速度
+          cursorwidth: "8px", // 滚动条的宽度，单位：便素
+          mousescrollstep: 20, // 鼠标滚轮的滚动速度 (像素)
+          cursorminheight: 10, // 设置滚动条的最小高度 (像素)
+          preventmultitouchscrolling: true // 防止多触点事件引发滚动
+        })
+      }
+    );
+
+
+    myAjax(selectAllIntentionSheetOrder, {
+      userId: '1091'
+    }, handle)
+
+    function handle(data, param) {
+
+      console.log(data)
+      localStorage.setItem("orderInfoData", JSON.stringify(data.data[0]))
+      let orderInfo = ''
+      let DATA = data.data;
+      for (let i = 0; i < DATA.length; i++) {
+        orderInfo += `
+        <div class="cusInfoBox cssFlex">
+          <img src="../images/hotel_img.png" alt="">
+          <div class="cusInfoMain">
+            <h3>${DATA[i].startFrom} -- ${DATA[i].destination}</h3>
+            <p class="H3susb">订单编号：<span>${DATA[i].orderNum}</span> </p>
+            <p>下单日期：<span>${timestampToTime(DATA[i].goTime)}</span></p>
+            <p>出行日期：<span>${timestampToTime(DATA[i].backTime)}</span></p>
+            <div class="cusInfoMainDetail cssFlex">
+              <span>方案设计中报价待定</span>
+              <div class="infoDetail" data-id='${DATA[i].userId}'>订单详情</div>
+            </div>
+          </div>
+        </div>
+        `;
+
+      }
+      $(".cusInfo").html(orderInfo)
+
+      $(".infoDetail").on("click", function () {
+        let userId = $(this).attr("data-id")
+        window.location.href = 'customDetail.html?userId=' + userId;
+      })
+    }
+  </script>
+</body>
+
+</html>

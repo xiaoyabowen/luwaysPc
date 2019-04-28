@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>路途-专注于境外目的地产品</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<!--[if lte IE 9]>
+		<script src="https://cdn.bootcss.com/html5shiv/3.6/html5shiv.min.js"></script>
+		<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+		<![endif]-->
+
+		<!--[if lte IE 8]>
+	    <div class="text-xs-center m-b-0 bg-blue-grey-100 alert">
+	        <button type="button" class="close" aria-label="Close" data-dismiss="alert">
+	            <span aria-hidden="true">×</span>
+	        </button>
+	        	你正在使用一个 <strong>过时</strong> 的浏览器。请 <a href=https://browsehappy.com/ target=_blank style="color:#FF9600;">升级您的浏览器</a>，以提高您的体验。
+	    </div>
+	    <![endif]-->
+		<!--网页logo-->
+		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/hotel.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/pagination.css"/>
+		<script src="../js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.hotelTab>li.hotelTabImgTh>a:after{
+				
+			    width: 100%!important;
+			   
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<!--初始tab  酒店 全部信息-->
+		<div class="hotelContent headerSubCommon">
+			<ul class="hotelTab cssFlex">
+				<li class="hotelTabImgO"><a href="hotel.html">酒店</a></li>
+				<li class="hotelTabImgT"><a href="ticket.html">门票</a></li>
+				<li class="hotelTabImgTh"><a href="local.html">当地玩乐</a></li>
+			</ul>
+			<!--面包屑导航-->
+			<div class="hotelNavBread">
+				您在这里：首页&nbsp;>&nbsp;门票&nbsp;>&nbsp;<span>曼谷艾塔斯酒店式公寓</span>
+			</div>
+			<!--目的地-->
+			<div class="hotelDestination cssFlex">
+				<div class="hotelDestinationInput">
+					<input type="text" name="hotelDestinationInput" id="hotelDestinatinInput" value="" placeholder="我想去...." />
+				</div>
+				
+				<button class="tickerCheckPeopleSerch"></button>
+			</div>
+			<!--================价格范围区间进行选择-->
+			<div class="hotelTypeSelection">
+				<div class="tickerTypeSelectionRange cssFlex">
+					<div class="tickerTypeSelectionRangeLeft">价格范围：</div>
+					<ul class="cssFlex">
+						<li class="tickerTypeSelectionRangeLeftActive">不限</li>
+						<li data-price="200">200元以下</li>
+						<li data-price="500">200-500元</li>
+						<li data-price="800">500-800元</li>
+					</ul>
+					<span>输入范围：</span>
+					<div class="tickerDestinationInput">
+						<input type="text" name="tickerCheckPeopleNum" id="tickerInputRangeStart" maxlength="4" onkeyup="value=value.replace(/[^\d]/g,'')" value="" />
+					</div>
+					<span style="margin-right: 10px;">至</span>
+					<div class="tickerDestinationInput">
+						<input type="text" name="tickerCheckPeopleRoom" id="tickerInputRangeEnd" maxlength="4" onkeyup="value=value.replace(/[^\d]/g,'')" value="" />
+					</div>
+					<button class="hotelCheckPeopleSerch tickerTypeSelectionRangeSearch">确定</button>
+				</div>
+				
+				<div class="tickerTypeSelectionRange cssFlex">
+					<div class="tickerTypeSelectionRangeLeft">可定日期：</div>
+					<ul class="cssFlex">
+						<li class="tickerTypeSelectionRangeLeftActive">不限</li>
+						<li>今日可定</li>
+						<li>明日可定</li>
+					</ul>
+				</div>
+				<div class="tickerTypeSelectionRange cssFlex">
+					<div class="tickerTypeSelectionRangeLeft">特色玩乐：</div>
+					<ul class="cssFlex">
+						<li class="tickerTypeSelectionRangeLeftActive">不限</li>
+						<li>潜水</li>
+						<li>直升机</li>
+						<li>跳伞</li>
+						<li>交通出行</li>
+						<li>一日游/多日游</li>
+						<li>演出赛事</li>
+						<li>购物之旅</li>
+						<li>热气球</li>
+						<li>温泉体验</li>
+						<li>主题公园</li>
+					</ul>
+				</div>
+				<div class="tickerTypeSelectionRange cssFlex">
+					<div class="tickerTypeSelectionRangeLeft">确认类型：</div>
+					<ul class="cssFlex">
+						<li class="tickerTypeSelectionRangeLeftActive">不限</li>
+						<li>二次确认</li>
+						<li>及时确认</li>
+					</ul>
+				</div>
+			</div>
+			<!--================价格范围区间进行选择结束-->
+			<!--选取的酒店进行渲染展示以及根据价格/星级/综合排序进行分类展示-->
+			<ul class="hotelSive cssFlex">
+				<li class="hotelSiveActive">综合排序</li>
+				<li>价格</li>
+				<li>星级</li>
+			</ul>
+			<!--酒店展示-->
+			<div class="hotelShowAll cssFlex">
+				<div class="hotelShowAllPage">
+					<ul>
+						<li>
+							<!--每一条酒店数据详情-->
+							<div class="hotelShowAllPageImg">
+								<img src="../images/hotel_img.png" alt="酒店照片" />
+							</div>
+							<div class="hotelShowAllPageInfo">
+								<h4>格雷茅斯君门酒店 (Kingsgate Hotel Greymouth)</h4>
+								<p>32 MAWHERA QUAY,32 ,格雷默斯.</p>
+								<p>
+									服务语言：<span>英语</span>
+								</p>
+								<p>
+									游玩时间：<span>灵活</span>
+								</p>
+								<p class="cssFlex">
+									<span class="tickerLabel">直升机</span>
+								</p>
+								<p class="tickerOrderPrice">
+									￥924起
+								</p>
+								<a class="sucssBtn tickerShowAllDetails">
+									<span data-tit="立即预定 >">立即预定</span>
+								</a>
+								<!--<button class="tickerShowAllDetails">立即预定</button>-->
+							</div>
+						</li>
+						<li>
+							<!--每一条酒店数据详情-->
+							<div class="hotelShowAllPageImg">
+								<img src="../images/hotel_img.png" alt="酒店照片" />
+							</div>
+							<div class="hotelShowAllPageInfo">
+								<h4>格雷茅斯君门酒店 (Kingsgate Hotel Greymouth)</h4>
+								<p>32 MAWHERA QUAY,32 ,格雷默斯.</p>
+								<p>
+									服务语言：<span>英语</span>
+								</p>
+								<p>
+									游玩时间：<span>灵活</span>
+								</p>
+								<p class="cssFlex">
+									<span class="tickerLabel">直升机</span>
+								</p>
+								<p class="tickerOrderPrice">
+									￥924起
+								</p>
+								<a class="sucssBtn tickerShowAllDetails">
+									<span data-tit="立即预定 >">立即预定</span>
+								</a>
+								<!--<button class="tickerShowAllDetails">立即预定</button>-->
+							</div>
+						</li>
+						
+					</ul>
+					
+					<div class="hotelPage"></div>					
+					
+				</div>
+				<div class="hotelShowAllMap">
+					<!--地图定位-->
+					<p class="hotelShowAllMapHot">境外目的地推荐</p>
+					<div class="tickerShowAllMapPosition">
+						<ul class="cssFlex" style="flex-wrap: wrap">
+							<li>亚洲</li>
+							<li>欧洲</li>
+							<li>美洲</li>
+							<li>澳洲</li>
+							<li>中东非</li>
+							<li>西雅图</li>
+							<li>耶洛奈夫</li>
+							<li>洛杉矶</li>
+							<li>阿布扎比</li>
+							<li>巴黎</li>
+						</ul>
+					</div>
+					<!--热门酒店-->
+					<p class="hotelShowAllMapHot">热门酒店</p>
+					<ul>
+						<li>
+							<div class="hotelShowAllMapImg">
+								<img src="../images/new_hotel_img.png" alt="热门酒店"/>
+							</div>
+							<h4>艾塔斯酒店</h4>
+							<p>房间类型：BB/RO</p>
+							<p class="hotelShowAllMapHotPrice">¥558.88起</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="../js/ajax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/project.js" type="text/javascript" charset="utf-8"></script>
+		<!--自定义滚动条插件-->
+		<script src="../js/scroll.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="../js/jquery.pagination.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('.hotelPage').pagination({
+			    coping: true,
+			    prevContent: '<',
+			    nextContent: '>'
+			});
+		</script>
+	</body>
+
+</html>

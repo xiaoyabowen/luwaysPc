@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>路途-认证信息</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<!--[if lte IE 9]>
+		<script src="https://cdn.bootcss.com/html5shiv/3.6/html5shiv.min.js"></script>
+		<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+		<![endif]-->
+		<!--[if lte IE 8]>
+	    <div class="text-xs-center m-b-0 bg-blue-grey-100 alert">
+	        <button type="button" class="close" aria-label="Close" data-dismiss="alert">
+	            <span aria-hidden="true">×</span>
+	        </button>
+	        	你正在使用一个 <strong>过时</strong> 的浏览器。请 <a href=https://browsehappy.com/ target=_blank style="color:#FF9600;">升级您的浏览器</a>，以提高您的体验。
+	    </div>
+	    <![endif]-->
+		<!--网页logo-->
+		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<link rel="stylesheet" href="../css/common.css">
+		<link rel="stylesheet" type="text/css" href="../css/difference.css" />
+		<script src="../js/jquery-1.9.1.min.js"></script>
+	</head>
+
+	<body>
+		<!--登陆导航条-->
+		<div class="header">
+			<div class="headerSub headerSubCommon">
+				<!--logo-->
+				<div class="navLogo">
+					<a href="indexNotLogin.html"><img src="../images/logo.png" alt="logo"/></a>
+				</div>
+				<!--登陆注册按钮-->
+				<div class="login">
+					<a href="login.html">登陆</a>
+					<a href="resiger.html">注册</a>
+					<a href="">帮助</a>
+				</div>
+			</div>
+		</div>
+
+		<!--注册成功认证信息-->
+		<div class="resierForm">
+			<form method="post" id="test_form">
+				<h3>认证信息</h3>
+				<h4>联系人信息</h4>
+				<p>
+					<input type="text" name="userName" id="userName" placeholder="姓名" />
+					<img src="../images/icon/true.png" alt="" class="userNameTrue">
+		            <img src="../images/icon/del.png" alt="错误信息" class="del-userName">
+		            <span id="judgeUserName"></span>
+				</p>
+				<p>
+					<input type="text" name="userPhone" id="userPhone" value="" placeholder="电话" />
+					<img src="../images/icon/true.png" alt="" class="userPhoneTrue">
+		            <img src="../images/icon/del.png" alt="错误信息" class="del-userPhone">
+		            <span id="judgePhone"></span>
+				</p>
+				<p>
+					<input type="text" name="userEmail" id="userEmail" value="" placeholder="邮箱" />
+					<img src="../images/icon/true.png" alt="" class="userEmailTrue">
+		            <img src="../images/icon/del.png" alt="错误信息" class="del-userEmail">
+		            <span id="judgeEmail"></span>
+				</p>
+				<h4>公司信息</h4>
+				<p>
+					<input type="text" name="companyName" id="companyName" placeholder="公司名称" />
+					<img src="../images/icon/true.png" alt="" class="companyNameTrue">
+		            <img src="../images/icon/del.png" alt="错误信息" class="del-companyName">
+		            <span id="judgeCompanyName"></span>
+				</p>
+				<p>
+					<input type="text" name="companyUrl" id="companyUrl" value="" placeholder="公司网址" />
+					<img src="../images/icon/true.png" alt="" class="companyUrlTrue">
+		            <img src="../images/icon/del.png" alt="错误信息" class="del-companyUrl">
+		            <span id="judgeUrl"></span>
+				</p>
+				<p>
+					<input type="text" name="companyAdress" id="companyAdress" value="" placeholder="公司详细所在地" />
+					<img src="../images/icon/true.png" alt="" class="companyAdressTrue">
+		            <img src="../images/icon/del.png" alt="错误信息" class="del-companyAdress">
+		            <span id="judgeAdress"></span>
+				</p>
+				
+				<!--<p>
+					<label>营业执照</label>
+					<input type="file" name="" id="" value="" />
+				</p>-->
+				
+			</form>
+			<div class="informationTextarea">
+				<label>经营业务</label>
+				<textarea id="operation" placeholder="500字以内" onKeyDown="LimitTextArea(this)" onKeyUp="LimitTextArea(this)" onkeypress="LimitTextArea(this)"></textarea>
+				<span id="limitedNum"><i id="showTextNum"></i><i id="overTextNum"></i></span>
+			</div>
+			<div class="icheckFontMain">
+				<span id="ichecksImg"></span>
+				<img src="../images/icon/check.png" class="ichecksImgPosi" alt="">
+				<span>同意路途网入驻协议</span>
+			</div>
+			<button id="resiterSign">提交</button>
+		</div>
+
+		<div class="loginFooterFont">
+			Copyright 2016 Luways.com 京ICP备16044893号-2
+		</div>
+
+
+		<script src="../js/ajax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/project.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="../js/resiterInfo.js" type="text/javascript" charset="utf-8"></script>-->
+		<!--自定义滚动条插件-->
+		<script src="../js/scroll.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			
+			$(document).ready(
+				 function() { 
+				  	$("html").niceScroll({
+					    cursorcolor: "#ff9600", // 改变滚动条颜色，使用16进制颜色值
+					    cursoropacitymax: 1, // 当滚动条是显示状态时改变透明度, 值范围 1 到 0
+					    cursorborder: "none", // CSS方式定义滚动条边框
+					    autohidemode: true, // 隐藏滚动条的方式, 可用的值: 
+					    background: "transparent", // 轨道的背景颜色
+					    scrollspeed: 60, // 滚动速度
+                        cursorwidth: "8px", // 滚动条的宽度，单位：便素
+						mousescrollstep: 20, // 鼠标滚轮的滚动速度 (像素)
+						cursorminheight: 10, // 设置滚动条的最小高度 (像素)
+						preventmultitouchscrolling: true // 防止多触点事件引发滚动
+					}) 
+				 }
+			);
+
+            //注册第一步操作
+            $("#signResiter").click(function() {
+
+                //	获取文本内容
+                var userName = $("#userName").val();
+                var userPass = $("#userPass").val();
+
+//	if(!checkUserName() || !checkPwd() || !checkPwdToo() || !checkUserNameOnly()) {
+                if(!checkUserName() || !checkPwd() || !checkPwdToo() ) {
+                    return
+                }
+                var params = {};
+                params.username = userName
+                params.password = userPass
+                myAjax(resterServer, params, handle)
+
+                function handle(data, param) {
+                    //		var data = JSON.parse(data)
+                    if(data.success) {
+                        var nicName = data.data.username
+                        window.location.href = "resiterInformation.html?nicName=" + nicName
+                    } else {
+
+                    }
+                }
+            })
+            //截取地址栏字符串
+            function GetQueryString(name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                var r = window.location.search.substr(1).match(reg);
+                if (r != null) return decodeURI(r[2]); return null;
+            }
+
+            //注册第二步操作
+            $("#resiterSign").click(function() {
+                var lkm = $("#userName").val();
+                var lkmPhone = $("#userPhone").val();
+                var lkmEmail = $("#userEmail").val();
+                var name = $("#companyName").val();
+                var link = $("#companyUrl").val();
+                var location = $("#companyAdress").val();
+                var scope = $("#operation").val();
+                var nicName= GetQueryString("nicName");
+                // console.log(nicName)
+                if(!checkUserName() || !checkTel() || !checkEmail() || !checkCompanyName() || !checkUrl()) {
+                    return
+                }
+                var params = {};
+                params.lkm = lkm
+                params.lkmPhone = lkmPhone
+                params.lkmEmail = lkmEmail
+                params.name = name
+                params.link = link
+                params.location = location
+                params.scope = scope
+                params.nicName = nicName
+
+                myAjax(regSecond, params, handle)
+
+                function handle(data, param) {
+                    if(data.success) {
+                        window.location.href = "resiterSus.html"
+                    } else {
+
+                    }
+                }
+            })
+
+
+
+		</script>
+	</body>
+
+</html>

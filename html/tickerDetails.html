@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>路途-专注于境外目的地产品</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<!--[if lte IE 9]>
+		<script src="https://cdn.bootcss.com/html5shiv/3.6/html5shiv.min.js"></script>
+		<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+		<![endif]-->
+
+		<!--[if lte IE 8]>
+	    <div class="text-xs-center m-b-0 bg-blue-grey-100 alert">
+	        <button type="button" class="close" aria-label="Close" data-dismiss="alert">
+	            <span aria-hidden="true">×</span>
+	        </button>
+	        	你正在使用一个 <strong>过时</strong> 的浏览器。请 <a href=https://browsehappy.com/ target=_blank style="color:#FF9600;">升级您的浏览器</a>，以提高您的体验。
+	    </div>
+	    <![endif]-->
+		<!--网页logo-->
+		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/hotel.css" />
+		<link rel="stylesheet" type="text/css" href="../css/swiper.css"/>
+		<script src="../js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="../js/laydate/laydate.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.hotelTab>li.hotelTabImgT>a:after{
+				width: 100%!important;
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<!--初始tab  酒店 全部信息-->
+		<div class="hotelContent tickerContent headerSubCommon">
+			<ul class="hotelTab cssFlex">
+				<li class="hotelTabImgO"><a href="hotel.html">酒店</a></li>
+				<li class="hotelTabImgT"><a href="ticket.html">当地玩乐</a></li>
+				<!--<li class="hotelTabImgTh"><a href="local.html">当地玩乐</a></li>-->
+			</ul>
+			<!--面包屑导航-->
+			<div class="hotelNavBread">
+				您在这里：<a href="../index.html">首页</a>&nbsp;>&nbsp;<a href="ticket.html">门票</a>&nbsp;>&nbsp;<span class="hotelNavBreadCity"></span>
+			</div>
+			<!--目的地-->
+			<div class="hotelDestination cssFlex">
+				<span>出行时间</span>
+				<div class="hotelDestinationInput">
+					<input type="text" name="tickerCheckInDate" id="tickerCheckInDate" value="" placeholder="2018-07-02" />
+					<!--<span id="caledarFateWeek">周一</span>-->
+					<img src="../images/icon/search_hotel_icon_calendar.png" id="caledarFateImg" alt="日期表" />
+				</div>
+				<span>购买票数：</span>
+				<div class="payGoPiaoAdult cssFlex">
+					<!--<span>成人</span>
+					<div class="hotelDestinationInput hotelInputWidth">
+						<input type="text" name="hotelCheckPeopleNum" id="hotelCheckPeopleNum"data-bandId ='2'  class="addNumInputCommon CheckNum" maxlength="3" onkeyup="value=value.replace(/[^\d]/g,'')" value="1" />
+						<input type="hidden" class="hotelCheckPeopleNumResult"/>
+						<img src="../images/icon/content_search_nationality_arrow.png" id="arrowUp" alt="下拉箭头" onclick="show('sub')" />
+						<img src="../images/icon/content_search_nationality_arrow.png" id="arrowOut" alt="下拉箭头" onclick="show('sum')"  />
+					</div>-->
+				</div>
+				<div class="payGoPiaoYong cssFlex">
+					<!--<span>青年</span>
+					<div class="hotelDestinationInput hotelInputWidth">
+						<input type="text" name="hotelCheckPeopleNum" id="hotelCheckPeopleNumYong" class="CheckNum"  data-bandId ='5' maxlength="3" onkeyup="value=value.replace(/[^\d]/g,'')" value="0" />
+						<input type="hidden" class="hotelCheckPeopleNumYongResult"/>
+						<img src="../images/icon/content_search_nationality_arrow.png" id="arrowUp" alt="下拉箭头"  onclick="showOne('sub')"/>
+						<img src="../images/icon/content_search_nationality_arrow.png" id="arrowOut" alt="下拉箭头" onclick="showOne('sum')"  />
+						&lt;!&ndash;<img src="../images/icon/content_search_nationality_arrow.png" id="arrowUpNum" alt="下拉箭头" />&ndash;&gt;
+					</div>-->
+				</div>
+				<div class="payGoPiaoChild cssFlex">
+					<!--<span>儿童</span>
+					<div class="hotelDestinationInput hotelInputWidth">
+						<input type="text" name="hotelCheckPeopleNum" id="hotelCheckPeopleNumChild" class="CheckNum" data-bandId ='3'  maxlength="3" onkeyup="value=value.replace(/[^\d]/g,'')" value="0" />
+						<input type="hidden" class="hotelCheckPeopleNumChildResult"/>
+						<img src="../images/icon/content_search_nationality_arrow.png" id="arrowUp" alt="下拉箭头" onclick="showChild('sub')" />
+						<img src="../images/icon/content_search_nationality_arrow.png" id="arrowOut" alt="下拉箭头"  onclick="showChild('sum')" />
+						&lt;!&ndash;<img src="../images/icon/content_search_nationality_arrow.png" id="arrowUpNum" alt="下拉箭头" />&ndash;&gt;
+					</div>-->
+				</div>
+				<div class="payGoPiaoBaby cssFlex">
+					<!--<span>婴儿</span>
+					<div class="hotelDestinationInput hotelInputWidth">
+						<input type="text" name="hotelCheckPeopleNum" id="hotelCheckPeopleNumBaby" class="CheckNum" data-bandId ='4' maxlength="3" onkeyup="value=value.replace(/[^\d]/g,'')" value="0" />
+						<input type="hidden" class="hotelCheckPeopleNumBabyResult"/>
+						<img src="../images/icon/content_search_nationality_arrow.png" id="arrowUp" alt="下拉箭头" onclick="showBaby('sub')" />
+						<img src="../images/icon/content_search_nationality_arrow.png" id="arrowOut" alt="下拉箭头" onclick="showBaby('sum')"  />
+						&lt;!&ndash;<img src="../images/icon/content_search_nationality_arrow.png" id="arrowUpNum" alt="下拉箭头" />&ndash;&gt;
+					</div>-->
+				</div>
+				<div class="payGoPiaoOld cssFlex">
+					<!--<span>老人</span>
+					<div class="hotelDestinationInput hotelInputWidth">
+						<input type="text" name="hotelCheckPeopleNum" id="hotelCheckPeopleNumOld" class="CheckNum" data-bandId ='6'maxlength="3" onkeyup="value=value.replace(/[^\d]/g,'')" value="0" />
+						<input type="hidden" class="hotelCheckPeopleNumOldResult"/>
+						<img src="../images/icon/content_search_nationality_arrow.png" id="arrowUp" alt="下拉箭头" onclick="showOld('sub')" />
+						<img src="../images/icon/content_search_nationality_arrow.png" id="arrowOut" alt="下拉箭头" onclick="showOld('sum')"  />
+						&lt;!&ndash;<img src="../images/icon/content_search_nationality_arrow.png" id="arrowUpNum" alt="下拉箭头" />&ndash;&gt;
+					</div>-->
+				</div>
+
+				
+			</div>
+			<!--入住的人数-->
+			<div class="hotelCheckPeople tickerCheckPeople">
+				<span class="CheckPeopleSpan">可选套餐</span>
+				<ul class="clearfix ticketOptional">
+					<!--<li class="tickerCheckPeopleActive">神奇乐园</li>
+					<li>迷你乐园</li>-->
+				</ul>
+			</div>
+
+			<!--房间详细信息-->
+			<div class="hotelHomeDetails cssFlex">
+
+				<div class="swiper-container" id="swiper-container1" >
+					  <div class="swiper-wrapper">
+					    <div class="swiper-slide">
+					    	<div class="hotelHomeDetailsImg">
+								<img src="" class="hotelHomeDetailsImgTitle" alt="酒店详情" />
+								<img src="../images/icon/threeJ.png" id="otelHomeDetailsthreeJ" alt="三角" />
+							</div>
+					    </div>
+					   <!-- <div class="swiper-slide">
+					    	<div class="hotelHomeDetailsImg">
+								<img src="../images/new_hotel_img.png" alt="酒店详情" />
+								<img src="../images/icon/threeJ.png" id="otelHomeDetailsthreeJ" alt="三角" />
+							</div>
+					    </div>
+					    <div class="swiper-slide">
+					    	<div class="hotelHomeDetailsImg">
+								<img src="../images/new_hotel_img.png" alt="酒店详情" />
+								<img src="../images/icon/threeJ.png" id="otelHomeDetailsthreeJ" alt="三角" />
+							</div>
+					    </div>-->
+					  </div>
+					   <!--<div class="swiper-pagination"></div>-->
+				</div>
+				<div class="swiper-container" id="swiper-container2">
+					<div class="swiper-wrapper">
+					    <div class="swiper-slide">
+					    	<div class="hotelHomeDetailsContent tickerHomeDetailsContent">
+								<h4 class="ticketTitle ellipsis"></h4>
+								<p>
+									产品类型：<span class="ticketType"></span>
+								</p>
+								<p>
+									服务语言：<span class="ticketLangue"></span>
+								</p>
+								<p>
+									凭证类型：<span class="ticketPing"></span>
+								</p>
+								<p>
+									产品编号：<span class="ticketPrduct"></span>
+								</p>
+								<p>
+									游玩时间：<span class="ticketPlay"></span>
+								</p>
+								<p class="ticketAdult">
+									<!--<span class="tickerDetailsPrice">成人价格：</span><span>￥305.59/人(成人>18)</span>-->
+								</p>
+								<p class="ticketYong">
+									<!--<span class="tickerDetailsPrice">青年价格：</span><span>￥305.59/人(成人>18)</span>-->
+								</p>
+								<p  class="ticketChildren">
+									<span class="tickerDetailsPrice">儿童价格：</span><span>￥305.59/人(成人>18)</span>
+								</p>
+								<p class="ticketBaby">
+									<span class="tickerDetailsPrice">婴儿价格：</span><span>￥305.59/人(成人>18)</span>
+								</p>
+								<p class="ticketOld">
+									<span class="tickerDetailsPrice">婴儿价格：</span><span>￥305.59/人(成人>18)</span>
+								</p>
+								<div class="allPricePosi">
+									<p>
+										总价：<span class="tickerDetailsAllPrice"><i class="tickerDetailsAllPriceaLL" style="text-decoration:line-through;margin-right: 15px"></i><i><em>￥</em><em class="tickerDetailsAllPriceaLLNow"></em><em>元</em></i></span>
+									</p>
+									<p class="cssFlex ticketYU">
+
+										<a class="sucssBtn tickDetailReserve tickDetailShop">
+											<span data-tit="加入购物车 >">加入购物车</span>
+										</a>
+										<a class="sucssBtn tickDetailReserve tickDetailReserveJump">
+											<span data-tit="立即预定 >">立即预定</span>
+										</a>
+										<!--<button class="tickerDetailJoinCar">加入购物车</button>
+                                        <button class="tickDetailReserve">立即预定</button>-->
+									</p>
+								</div>
+
+							</div>
+					    </div>
+
+					</div>
+				</div>
+				
+
+				<!--<div class="hotelHomeDetailsImg">
+					<img src="../images/new_hotel_img.png" alt="酒店详情" />
+					<img src="../images/icon/threeJ.png" id="otelHomeDetailsthreeJ" alt="三角" />
+				</div>-->
+				
+			</div>
+
+			<!--产品信息-->
+			<p class="hotelShowAllMapHot">产品信息</p>
+			<h5>产品亮点</h5>
+			<div class="tickerDetailLight"></div>
+			<h5>产品介绍</h5>
+			<div class="tickerDetailPrduct"></div>
+			<p class="hotelShowAllMapHot">产品信息</p>
+			<h5>费用包含：</h5>
+			<div class="tickerDetailCost"></div>
+			<h5>费用不包含：</h5>
+			<div class="tickerDetailNotCost"></div>
+			<h5>预定凭证：</h5>
+			<div class="tickerDetailVoucher"></div>
+			<h5>重要提示：</h5>
+			<div class="tickerDetailTls"></div>
+			<p class="hotelShowAllMapHot">退改规则</p>
+			<div class="tickerDetailRuls"></div>
+			<p class="hotelShowAllMapHot TicketRelevant">相关推荐</p>
+
+			<!--相关推荐-->
+			<ul class="tickerRecommend clearfix">
+				<!--<li>
+					<img src="../images/Recommend.png" class="tickerRecommendAllImg" alt="相关推荐" />
+					<img src="../images/icon/threeJ.png" class="tickerThreeJ"/>
+				</li>
+				<li>
+					<h4>巴黎山谷购物村购物之旅（往返接送+从巴黎出发）</h4>
+					<p>适合首次观光的旅客</p>
+					<p>适合首次观光的旅客</p>
+					<p>适合首次观光的旅客</p>
+					<p class="tickerRecommendAllPrice">￥3455起</p>
+				</li>
+				<li>
+					<img src="../images/Recommend.png" class="tickerRecommendAllImg" alt="相关推荐" />
+					<img src="../images/icon/threeJ.png" class="tickerThreeJ"/></li>
+				<li>
+					<h4>巴黎山谷购物村购物之旅（往返接送+从巴黎出发）</h4>
+					<p>适合首次观光的旅客</p>
+					<p>适合首次观光的旅客</p>
+					<p>适合首次观光的旅客</p>
+					<p class="tickerRecommendAllPrice">￥3455起</p>
+				</li>
+				<li>
+					<h4>巴黎山谷购物村购物之旅（往返接送+从巴黎出发）</h4>
+					<p>适合首次观光的旅客</p>
+					<p>适合首次观光的旅客</p>
+					<p>适合首次观光的旅客</p>
+					<p class="tickerRecommendAllPrice">￥3455起</p>
+				</li>
+				<li>
+					<img src="../images/Recommend.png" class="tickerRecommendAllImg" alt="相关推荐" />
+					<img src="../images/icon/threeJ.png" class="tickerThreeJR"/>
+				</li>
+				<li>
+					<h4>巴黎山谷购物村购物之旅（往返接送+从巴黎出发）</h4>
+					<p>适合首次观光的旅客</p>
+					<p>适合首次观光的旅客</p>
+					<p>适合首次观光的旅客</p>
+					<p class="tickerRecommendAllPrice">￥3455起</p>
+				</li>
+				<li>
+					<img src="../images/Recommend.png" class="tickerRecommendAllImg" alt="相关推荐" />
+					<img src="../images/icon/threeJ.png" class="tickerThreeJR"/>
+				</li>-->
+			</ul>
+			
+		</div>
+		<script src="../js/ajax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/ticketDetails.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="../js/project.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/swiper.js" type="text/javascript" charset="utf-8"></script>
+<!--自定义滚动条插件-->
+		<script src="../js/scroll.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			//	sweiper双向绑定
+			var Swiper1 = new Swiper('#swiper-container1', {
+				pagination : '.swiper-pagination',
+				autoplay : 5000,
+				speed:500,
+				paginationClickable :true,
+			})
+			/*var Swiper2 = new Swiper('#swiper-container2', {})
+			Swiper1.params.control = Swiper2;
+			Swiper2.params.control = Swiper1;*/
+
+            //日期选择器
+            $(function(){
+//				入住時間
+                laydate.render({
+
+                    elem: '#tickerCheckInDate',
+                    min: 0,
+                    max : 30,  // 最大日期
+                    showBottom: false,
+                    calendar: true,
+                    theme: '#ff9600',
+                    done: function(value, date, endDate){
+                        console.log(value); //得到日期生成的值，如：2017-08-18
+                        detailsFun(value)
+                    }
+                });
+            })
+		</script>
+	</body>
+
+</html>

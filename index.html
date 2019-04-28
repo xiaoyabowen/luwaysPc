@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>路途-专注于境外目的地产品</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<!--[if lte IE 9]>
+	    <script src="https://cdn.bootcss.com/html5shiv/3.6/html5shiv.min.js"></script>
+	    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+	    <![endif]-->
+
+		<!--[if lte IE 8]>
+	    <div class="text-xs-center m-b-0 bg-blue-grey-100 alert">
+	        <button type="button" class="close" aria-label="Close" data-dismiss="alert">
+	            <span aria-hidden="true">×</span>
+	        </button>
+	        	你正在使用一个 <strong>过时</strong> 的浏览器。请 <a href=https://browsehappy.com/ target=_blank style="color:#FF9600;">升级您的浏览器</a>，以提高您的体验。
+	    </div>
+	    <![endif]-->
+		<!--网页logo-->
+		<link href="html/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="css/difference.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.css" />
+		<link rel="stylesheet" type="text/css" href="js/laydate/theme/default/laydate.css" />
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style>
+		/*swiper  分页样式*/
+		.swiper-pagination-bullet{
+			width: 10px !important;
+			height: 10px !important;
+			display: inline-block !important;
+			border-radius: 100% !important;
+			background: #fff !important;
+			opacity: .9 !important;
+			border: 1px solid #ff9600 !important;
+		}
+		.swiper-pagination-bullet-active {
+			opacity: 0.9 !important;
+			background: #ff9600 !important;
+		}
+	</style>
+	<body>
+		<!--头部-->
+		<div class="notLoginHeader">
+			<a href="index.html"><img src="images/banner.jpg" id="notLoginBg" alt="" /></a>
+			<div class="subNotLoginHeader headerSubCommon">
+				<!--logo-->
+				<div class="comNavLogo">
+					<a href="javascript:;"><img src="images/logo.png" id="logoImg" /></a>
+				</div>
+				<!--nav导航条-->
+				<div class="notLoginNav">
+					<a href="index.html" class="notLoginNavOne"><span>首页</span></a>
+					<a href="html/myOrder.html" class="notLoginNavTwo"><span>我的订单</span></a>
+					<a href="html/shoppingCar.html" class="notLoginNavThree"><span>购物车</span></a>
+					<a href="html/myCollection.html" class="notLoginNavFour"><span>收藏</span></a>
+					<a href="html/personalCenter.html" class="notLoginNavFive"><span>Luways</span>
+						<div class="LoginNavPup LoginNavPupAfter">
+							<p class="personCenter">个人中心</p>
+							<p class="logout">退出</p>
+						</div>
+					</a>
+					<a href="javascript:;" class="notLoginNavgEmail">info@luways.com</a>
+					<a href="" class="notLoginNavgPhone">010-8562 8831</a>
+				</div>
+				<div id="bannerSearch">
+					<ul class="bannerSearchTab">
+						<li class="bannerSearchTabActive">酒店</li>
+						<li>当地玩乐</li>
+						<!--<li>当地玩乐</li>-->
+					</ul>
+					<div class="bannerSearchTabMain">
+						<div class="bannerSearchTabList bannerSearchTabFixed">
+							<p>
+								<input type="text" name="" id="checkInTime" value="" placeholder="入住时间" />
+								<img src="images/icon/search_hotel_icon_calendar.png" id="searchHotelImg" alt="选择日期" />
+							</p>
+							<p>
+								<input type="text" name="" id="checkOUutTime" value="" placeholder="退房时间" />
+								<img src="images/icon/search_hotel_icon_calendar.png" id="searchHotelImg" alt="选择日期" />
+							</p>
+							<p>
+								<input type="text" name="" id="destination" value="" placeholder="到达目的地"  onkeyup="searchSuggestHotel(this);" />
+								<ul class="keywords_list keywords_list_hotel">
+
+								</ul>
+							</p>
+							
+							<button class="bannerSearchTabSearch">搜索</button>
+						</div>
+						<div class="bannerSearchTabList bannerSearchTabListActive">
+							<!--<p class="bannerSearchTickerTitle">景点/目的地</p>-->
+							<div class="bannerSearchTicker">
+								<!--<input type="text" name="" id="bannerSearchTickerQuery" value="" placeholder="景点目的地" onkeyup="searchSuggestTiket(this);" />-->
+								<input type="text" name="" id="bannerSearchTickerQuery" value="" placeholder="景点目的地"/>
+								<button class="bannerSearchTickerBtn">搜索</button>
+
+								<ul class="keywords_list keywords_list_tiket">
+
+								</ul>
+							</div>
+						</div>
+						<!--<div class="bannerSearchTabList bannerSearchTabListActive">
+							&lt;!&ndash;<p class="bannerSearchTickerTitle">景点/目的地</p>&ndash;&gt;
+							<div class="bannerSearchTicker">
+								<input type="text" name="" id="bannerSearchLocalQuery" value="" placeholder="景点目的地&nbsp; 我想去..." />
+								<button class="bannerSearchTickerBtn">搜索</button>
+							</div>
+						</div>-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--消息推送-->
+		<div class="box">
+			<div class="t_news">
+				<img src="images/icon/pop_icon_horn.png" alt="" />
+				<ul class="news_li">
+					<li><a href="#" >您有一笔订单未支付，请点击我的订单了解详情</a></li>
+					<li><a href="#" >您有一笔订单未支付，请点击我的订单了解详情</a></li>
+				</ul>
+				<ul class="swap"></ul>
+			</div>
+		</div>
+		<!--当地玩乐-->
+		<div class="indexTitle">
+			当地玩乐
+		</div>
+		<div class="indexLocalAmusement headerSubCommon">
+			<ul class="indexLocalAmusementTab">
+				<li class="indexLocalAmusementTabActive">巴黎</li>
+				<li>巴塞罗那</li>
+				<li>伦敦</li>
+				<li>迪拜</li>
+				<li>新西兰</li>
+				<li>冰岛</li>
+			</ul>
+			<div class="indexLocalAmusementMain">
+				<!--1-->
+				<div class="indexLocalAmusementMainBox AmusementShow">
+					<!--左边部分-->
+					<div class="swiper-container" id="swiper-container1" >
+						<div class="swiper-wrapper swiperImgOne">
+							<!--<div class="swiper-slide">
+								<div class="hotelHomeDetailsImg">
+									<img src="images/new_hotel_img.png" alt="酒店详情" />
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="hotelHomeDetailsImg">
+									<img src="images/new_hotel_img.png" alt="酒店详情" />
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="hotelHomeDetailsImg">
+									<img src="images/new_hotel_img.png" alt="酒店详情" />
+								</div>
+							</div>-->
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+					<!--右边部分-->
+					<div class="swiper-container" id="swiper-container2">
+						<div class="swiper-wrapper swiperImgTwo">
+
+						</div>
+					</div>
+				</div>
+
+
+<!--2-->
+				<div class="indexLocalAmusementMainBox">
+					<!--左边部分-->
+					<div class="swiper-container" id="swiper-container3" >
+						<div class="swiper-wrapper swiperImgOne">
+							<!--<div class="swiper-slide">
+								<div class="hotelHomeDetailsImg">
+									<img src="images/new_hotel_img.png" alt="酒店详情" />
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="hotelHomeDetailsImg">
+									<img src="images/new_hotel_img.png" alt="酒店详情" />
+								</div>
+							</div>
+							<div class="swiper-slide"><div class="hotelHomeDetailsImg">
+								<img src="images/new_hotel_img.png" alt="酒店详情" />
+							</div>
+							</div>-->
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+					<!--右边部分-->
+					<div class="swiper-container" id="swiper-container4">
+						<div class="swiper-wrapper swiperImgTwo">
+
+						</div>
+					</div>
+				</div>
+<!--3-->
+				<div class="indexLocalAmusementMainBox">
+					<!--左边部分-->
+					<div class="swiper-container" id="swiper-container5" >
+						<div class="swiper-wrapper swiperImgOne">
+							<!--<div class="swiper-slide">
+								<div class="hotelHomeDetailsImg">
+									<img src="images/new_hotel_img.png" alt="酒店详情" />
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="hotelHomeDetailsImg">
+									<img src="images/new_hotel_img.png" alt="酒店详情" />
+								</div>
+							</div>
+							<div class="swiper-slide"><div class="hotelHomeDetailsImg">
+								<img src="images/new_hotel_img.png" alt="酒店详情" />
+							</div>
+							</div>-->
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+					<!--右边部分-->
+					<div class="swiper-container" id="swiper-container6">
+						<div class="swiper-wrapper swiperImgTwo">
+
+						</div>
+					</div>
+				</div>
+<!--4-->
+				<div class="indexLocalAmusementMainBox">
+					<!--左边部分-->
+					<div class="swiper-container" id="swiper-container7" >
+						<div class="swiper-wrapper swiperImgOne">
+
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+					<!--右边部分-->
+					<div class="swiper-container" id="swiper-container8">
+						<div class="swiper-wrapper swiperImgTwo">
+
+						</div>
+					</div>
+				</div>
+<!--5-->
+				<div class="indexLocalAmusementMainBox ">
+					<!--左边部分-->
+					<div class="swiper-container" id="swiper-container9" >
+						<div class="swiper-wrapper swiperImgOne">
+							<!--<div class="swiper-slide">
+								<div class="hotelHomeDetailsImg">
+									<img src="images/new_hotel_img.png" alt="酒店详情" />
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="hotelHomeDetailsImg">
+									<img src="images/new_hotel_img.png" alt="酒店详情" />
+								</div>
+							</div>
+							<div class="swiper-slide"><div class="hotelHomeDetailsImg">
+								<img src="images/new_hotel_img.png" alt="酒店详情" />
+							</div>
+							</div>-->
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+					<!--右边部分-->
+					<div class="swiper-container" id="swiper-container10">
+						<div class="swiper-wrapper swiperImgTwo">
+
+						</div>
+					</div>
+				</div>
+<!--6-->
+				<div class="indexLocalAmusementMainBox ">
+					<!--左边部分-->
+					<div class="swiper-container" id="swiper-container11" >
+						<div class="swiper-wrapper swiperImgOne">
+							<!--<div class="swiper-slide">
+								<div class="hotelHomeDetailsImg">
+									<img src="images/new_hotel_img.png" alt="酒店详情" />
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="hotelHomeDetailsImg">
+									<img src="images/new_hotel_img.png" alt="酒店详情" />
+								</div>
+							</div>
+							<div class="swiper-slide"><div class="hotelHomeDetailsImg">
+								<img src="images/new_hotel_img.png" alt="酒店详情" />
+							</div>
+							</div>-->
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+					<!--右边部分-->
+					<div class="swiper-container" id="swiper-container12">
+						<div class="swiper-wrapper swiperImgTwo">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--热门酒店-->
+		<div class="indexTitle">
+			热门酒店
+		</div>
+		<div class="indexHotel">
+			<div class="subIndexHotel headerSubCommon">
+				<div class="subIndexHotelMain">
+					<!--<a href="html/hotel.html">
+					<div class="subIndexHotelMainList animate" data-animate="bounceInLeft" data-duration="3s">
+						<div class="subIndexHotelMainListOver">
+							<img src="images/content_recommend_img_one.png" alt="" />
+						</div>
+						<div class="subIndexHotelMainListCotent">
+							<h4>曼谷艾塔斯酒店式公寓</h4>
+							<p>这间城市酒店致力于坚持酒店行业的最高标准。宾客可以得到完美的接待，客房散发出独特的风格……</p>
+							<div class="subIndexHotelMainListCotentPrice">￥687</div>
+						</div>
+					</div>
+				</a>
+					<a href="html/hotel.html">
+						<div class="subIndexHotelMainList">
+							<div class="subIndexHotelMainListOver">
+								<img src="images/content_recommend_img_one.png" alt="" />
+							</div>
+							<div class="subIndexHotelMainListCotent">
+								<h4>曼谷艾塔斯酒店式公寓</h4>
+								<p>这间城市酒店致力于坚持酒店行业的最高标准。宾客可以得到完美的接待，客房散发出独特的风格……</p>
+								<div class="subIndexHotelMainListCotentPrice">￥687</div>
+							</div>
+						</div>
+					</a>
+					<a href="html/hotel.html">
+						<div class="subIndexHotelMainList animate" data-animate="bounceInRight" data-duration="3s">
+							<div class="subIndexHotelMainListOver">
+								<img src="images/content_recommend_img_one.png" alt="" />
+							</div>
+							<div class="subIndexHotelMainListCotent">
+								<h4>曼谷艾塔斯酒店式公寓</h4>
+								<p>这间城市酒店致力于坚持酒店行业的最高标准。宾客可以得到完美的接待，客房散发出独特的风格……</p>
+								<div class="subIndexHotelMainListCotentPrice">￥687</div>
+							</div>
+						</div>
+					</a>-->
+
+				</div> 
+			</div>
+		</div>
+		
+		
+		<!--footer-->
+	
+<footer>
+		<div class="subFooter headerSubCommon">
+			<div class="aboutFooterCommon">
+				<h4>关于我们</h4>
+				<ul>
+					<li><a href="html/aboutLuWays.html">关于路途</a></li>
+					<li><a href="html/aboutLuCooperation.html">合作伙伴</a></li>
+					<li><a href="html/aboutLuContact.html">联系我们</a></li>
+					<li><a href="html/aboutLuServer.html">服务条款</a></li>
+					<li><a href="html/aboutLuUser.html">用户协议</a></li>
+				</ul>'
+			</div>
+			<div class="aboutFooterCommon">
+				<h4>业务介绍</h4>
+				<ul>
+					<li><a href="html/businessIntroduction.html">关于业务</a></li>
+					<li><a href="html/businessServer.html">服务内容</a></li>
+					<li><a href="html/businessCooperation.html">合作方式</a></li>
+					<li><a href="">服务详情</a></li>
+					<li><a href="">服务优势</a></li>
+				</ul>
+			</div>
+			<div class="aboutFooterCommon">
+				<h4>平台特色</h4>
+				<ul>
+					<li><a href="html/platformFeatures.html">商家平台</a></li>
+					<li><a href="html/platformAPI.html">标准API</a></li>
+				</ul>
+			</div>
+			<div class="aboutFooterCommon">
+				<h4>帮助中心</h4>
+				<ul>
+					<li><a href="html/helpPay.html">结算周期</a></li>
+					<li><a href="html/helpComput.html">支付方式</a></li>
+				</ul>
+		</div>
+			<div class="aboutFooterCommon">
+				<h4>联系我们</h4>
+				<ul>
+					<li><a href="">全天在线服务电话</a></li>
+					<li class="need"><a href="">010-8562 8831</a></li>
+					<li><a href="">客服邮箱</a></li>
+					<li class="need"><a href="">info@luways.com</a></li>
+				</ul>
+			</div>
+		</div>
+		<hr size="1" />
+		<div class="footerFirm">
+			<p class="firmTop">北京路途科技有限公司</p>
+			<p>Copyright 2016 Luways.com 京ICP备16044893号-2</p>
+		</div>
+		<div style="display:none;" id="rocket-to-top">
+			<div style="opacity:0;display:block;" class="level-2"></div>
+			<div class="level-3"></div>
+		</div>
+	</footer>
+		<!--自定义滚动条插件-->
+		<script src="js/swiper.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper-animate.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ajax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/laydate/laydate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/wow.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/scroll.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/loading.js" type="text/javascript" charset="utf-8"></script>-->
+		<script type="text/javascript"> 
+		//			滚动条样式
+		$(document).ready(
+			 function() { 
+			  	$("body").niceScroll({
+				    cursorcolor: "#ff9600", // 改变滚动条颜色，使用16进制颜色值
+				    cursoropacitymax: 1, // 当滚动条是显示状态时改变透明度, 值范围 1 到 0
+				    cursorborder: "none", // CSS方式定义滚动条边框
+				    autohidemode: true, // 隐藏滚动条的方式, 可用的值: 
+				    background: "transparent", // 轨道的背景颜色
+				    scrollspeed: 60, // 滚动速度
+                    cursorwidth: "8px", // 滚动条的宽度，单位：便素
+					mousescrollstep: 20, // 鼠标滚轮的滚动速度 (像素)
+					cursorminheight: 10, // 设置滚动条的最小高度 (像素)
+					preventmultitouchscrolling: true // 防止多触点事件引发滚动
+				})
+                 $(".keywords_list").niceScroll({
+                     cursorcolor: "#ff9600", // 改变滚动条颜色，使用16进制颜色值
+                     cursoropacitymax: 1, // 当滚动条是显示状态时改变透明度, 值范围 1 到 0
+                     cursorborder: "none", // CSS方式定义滚动条边框
+                     autohidemode: true, // 隐藏滚动条的方式, 可用的值:
+                     background: "transparent", // 轨道的背景颜色
+                     scrollspeed: 60, // 滚动速度
+
+                     mousescrollstep: 20, // 鼠标滚轮的滚动速度 (像素)
+                     cursorminheight: 10, // 设置滚动条的最小高度 (像素)
+                     preventmultitouchscrolling: true // 防止多触点事件引发滚动
+                 })
+			 }
+		);
+
+
+
+			
+			// 默认选择今天的日期
+			$("#checkInTime").attr("value",s2)
+			// 默认选择明天的日期
+			$("#checkOUutTime").attr("value",s3)
+			//日期选择器
+			$(function(){
+//				入住時間
+				laydate.render({
+					elem: '#checkInTime',
+					// value:'2018-09-10',
+					min: 0,
+					max : 30,  // 最大日期
+					showBottom: false,
+					calendar: true,
+					theme: '#ff9600'
+				});
+//				退房时间
+				laydate.render({
+					elem: '#checkOUutTime',
+                    // value:'2018-09-11',
+					max : 30,  // 最大日期
+					min: 1,
+					showBottom: false,
+					calendar: true,
+					theme: '#ff9600'
+				});
+
+			})
+
+
+
+        // 返回顶部  js
+        $(function() {
+            var e = $("#rocket-to-top"),
+                t = $(document).scrollTop(),
+                n,
+                r,
+                i = !0;
+            $(window).scroll(function() {
+                var t = $(document).scrollTop();
+                t == 0 ? e.css("background-position") == "0px 0px" ? e.fadeOut("slow") : i && (i = !1, $(".level-2").css("opacity", 1), e.delay(100).animate({
+                        marginTop: "-1000px"
+                    },
+                    "normal",
+                    function() {
+                        e.css({
+                            "margin-top": "-125px",
+                            display: "none"
+                        }),
+                            i = !0
+                    })) : e.fadeIn("slow")
+            }),
+                e.hover(function() {
+                        $(".level-2").stop(!0).animate({
+                            opacity: 1
+                        })
+                    },
+                    function() {
+                        $(".level-2").stop(!0).animate({
+                            opacity: 0
+                        })
+                    }),
+                $(".level-3").click(function() {
+                    function t() {
+                        var t = e.css("background-position");
+                        if (e.css("display") == "none" || i == 0) {
+                            clearInterval(n),
+                                e.css("background-position", "0px 0px");
+                            return
+                        }
+
+                        switch (t){
+                            case "0px 0px":
+                                e.css("background-position", "-2968px 0px");
+                                break;
+                            case "-298px 0px":
+                                e.css("background-position", "-448px 0px");
+                                break;
+                            case "-448px 0px":
+                                e.css("background-position", "-597px 0px");
+                                break;
+                            case "-597px 0px":
+                                e.css("background-position", "-747px 0px");
+                                break;
+                            case "-747px 0px":
+                                e.css("background-position", "-298px 0px");
+                        }
+                    }
+                    if (!i) return;
+                    n = setInterval(t, 50),
+                        $("html,body").animate({scrollTop: 0},"slow");
+                });
+        });
+
+
+
+        $(".notLoginNavFive").hover(function(){
+            $(".LoginNavPup").stop().show()
+        },function(){
+            $(".LoginNavPup").stop().hide()
+        })
+        // 个人中心跳转
+        $(document).on("click",".personCenter",function () {
+            window.location.href = '../html/personalCenter.html'
+        })
+        // 退出
+        $(document).on("click",".logout",function (event) {
+
+            event.preventDefault();
+
+            $.ajax({
+                url: userRestControllerLogout,
+                type: "POST",
+                dataType: "json",
+                sync:true,
+                xhrFields: {
+                    withCredentials: true
+                },
+                traditional:true,
+                success: function(data) {
+                    console.log(data)
+                    window.location.href = "html/indexNotLogin.html"
+                },
+                error: function() {
+
+                }
+            });
+        })
+
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,858 @@
+/*=============================我的订单样式开始*/
+/*订单用户信息*/
+.myOrderTabInfo{
+	margin-bottom: 40px !important;
+	margin-top: 40px !important;
+}
+.myOrderUser{
+	width:269px;
+	background:rgba(255,255,255,1);
+	box-shadow:6px 10px 27px rgba(222,222,222,0.36);
+	margin-right: 22px;
+	height: 394px;
+}
+.myOrderUserIcon{
+	width: 158px;
+	height: 118px;
+	margin: 52px auto 0;
+}
+.myOrderUserIconImg{
+	display: block;
+	width: 100%;
+	height: 118px;
+	border: 1px solid #FF9600;
+	border-radius: 50px;
+}
+
+p.centerComName {
+	margin: 20px auto 50px;
+	text-align: center;
+	font-weight: bold;
+	color: #ff9600;
+	font-size: 18px;
+}
+.myOrderALL{
+	border-top:1px solid rgba(222,222,222,1);
+}
+.myOrderALLNum{
+	padding: 35px;
+	border-right:1px solid rgba(222,222,222,1);
+}
+.myOrderALLNum:last-of-type{
+	border-right: none;
+}
+.myOrderALLNum>p{
+	line-height: 30px;
+	font-size: 18px;
+	text-align: center;
+}
+.myOrderAllnNumber,.myOrderShoppingCart{
+	font-weight: bold;
+}
+
+
+ 
+/*订单  tab   开始*/
+.myOrderUserTab{
+	width: 906px;
+	background:rgba(255,255,255,1);
+	box-shadow:6px 10px 27px rgba(222,222,222,0.36);
+	position: relative;
+}
+.myOrderUserTab>ul{
+	border:1px solid rgba(242,242,242,1);
+}
+.myOrderUserTab>ul>li{
+	width: 70px;
+	margin:0 30px;
+	padding-left: 30px;
+	position: relative;
+	height: 90px;
+	line-height: 90px;
+}
+.myOrderUserTab>ul>li>span{
+	display: inline-block;
+	background: #ccc;
+    position: absolute;
+    left: 0;
+	/*background: url(../images/icon/css_sprites.png) no-repeat;*/
+}
+
+
+.myOrderUserTab>ul>li>a{
+	/*width: 100px;*/
+	display: inline-block;
+}
+.myOrderUserTab>ul>li>a:hover{
+	color: #FF9600;
+}
+/*伪类*/
+.myOrderUserTab>ul>li>a:after{
+	content: "";
+	display: block;
+    width: 0;
+    height: 2px;
+    background-color: #FF9600;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+}
+
+/*tab  hover  icon*/
+.myOrderUserImgOne>span:after,.myOrderUserImgTwo>span:after,.myOrderUserImgThree>span:after,.myOrderUserImgoFour>span:after{
+	content: '';
+	display: block;
+	position: absolute;
+    top: 36px;
+	transition: all 0.5s;
+}
+.myOrderUserImgOne:hover span:after,.myOrderUserImgTwo:hover span:after,.myOrderUserImgThree:hover span:after,.myOrderUserImgoFour:hover span:after{
+	transition: all 0.3s;
+}
+/*1*/
+.myOrderUserImgOne>span:after{
+	width: 17px;
+	left: 6px;
+	height: 17px;
+	background:url(../images/icon/icon_order.png) center top no-repeat;
+}
+.myOrderUserImgOne:hover span:after{
+	background:url(../images/icon/icon_order.png) center bottom no-repeat;
+}
+
+
+/*2*/
+.myOrderUserImgTwo>span:after{
+	width: 17px;
+	left: 6px;
+	height: 17px;
+	background:url(../images/icon/icon_shop.png) center top no-repeat;
+}
+.myOrderUserImgTwo:hover span:after{
+	background:url(../images/icon/icon_shop.png) center bottom no-repeat;
+}
+
+/*3*/
+.myOrderUserImgThree>span:after{
+	width: 17px;
+	left: 6px;
+	height: 17px;
+	background:url(../images/icon/icon_shou.png) center top no-repeat;
+}
+.myOrderUserImgThree:hover span:after{
+	background:url(../images/icon/icon_shou.png) center bottom no-repeat;
+}
+
+/*4*/
+.myOrderUserImgoFour>span:after{
+	width: 17px;
+	left: 6px;
+	height: 17px;
+	background:url(../images/icon/icon_user.png) center top no-repeat;
+}
+.myOrderUserImgoFour:hover span:after{
+	background:url(../images/icon/icon_user.png) center bottom no-repeat;
+}
+
+
+.myOrderUserTab>ul>li a.myOrderUserTabActive{
+	color: #FF9600;
+}
+.myOrderUserTab>ul>li a.myOrderUserTabActive::after{
+	left:0; 
+	width: 100px;
+}
+
+.myOrderUserTab>ul>li:hover a::after{
+	left:0; 
+	transition: .3s;
+	width: 100px;
+}
+/*tab下拉菜单*/
+.myOrderUserTab>ul>li>p{
+	display: none;
+	position: absolute;
+	top: 70px;
+    left: 0px;
+    text-align: center;
+    background:rgba(255,255,255,1);
+	border:1px solid rgba(222,222,222,1);
+	border-top: none;
+	width:100px;
+}
+.myOrderUserTab>ul>li>p>a{
+	display: block;
+	height:30px;
+	line-height: 30px; 
+}
+.myOrderTabUp{
+	display: none;
+
+	z-index: 1111;
+	width: 100px;
+	left: 0;
+	top: 70px;
+	text-align: center;
+	position: absolute;
+	background:rgba(255,255,255,1);
+	box-shadow:0px 10px 24px rgba(222,222,222,0.48);
+}
+.myOrderTabUp p{
+	color: #333;
+	line-height: 40px !important;
+	cursor: pointer;
+}
+.myOrderTabUp p:hover{
+	color: #ff9600;
+	transition: .3s;
+}
+
+
+
+
+
+
+
+/*hover  xianshi*/
+
+
+
+
+
+
+
+
+
+/*tab   图标*/
+
+
+
+
+/*我的订单状态*/
+.myOrderQuery{
+	padding: 70px 30px 35px 33px;	
+	line-height: 46px;
+}
+.myOrderQuery>span{
+	margin-right: 8px;
+}
+.myOrderQuery>input{
+	width: 186px;
+	border:1px solid rgba(222,222,222,1);
+	border-radius:4px;
+	margin-right: 20px;
+	height: 26px;
+	padding: 10px;
+	font-size: 16px;
+}
+
+/*我的訂單   日期选择查询*/
+
+.myOrderdate{
+	height: 46px;
+	line-height: 46px;
+	padding-left: 30px;
+}
+.selctDate{
+	margin-right: 40px;
+    width: 140px !important;
+}
+.myOrderdate>span{
+	margin-right: 8px;
+	width: 70px;
+}
+.myOrderdateSpan{
+	display: inline-block;
+	width: 30px;
+}
+.myOrderdate>p{
+	position: relative;
+	height: 46px;
+}
+.myOrderdate>p>input{
+	width: 186px;
+	border:1px solid rgba(222,222,222,1);
+	border-radius:4px;
+	margin-right: 20px;
+	height: 26px;
+	line-height: 26px;
+	padding: 10px;
+	font-size: 16px;
+}
+#searchHotelImg{
+	position: absolute;    
+	right: 30px;
+    top: 15px;
+	width: 18px;
+	height: 18px;
+}
+.tickerCheckPeopleSerch{
+	width:64px;
+	height:46px;
+	background:url(../images/icon/search.png) no-repeat center center,rgba(255,150,0,1);
+	background-size: 22px 22px;
+	border-radius:4px;
+	cursor: pointer;
+}
+
+/*订单为空*/
+.myOrderNull{
+	height:403px;
+	margin-bottom: 130px;
+	background:rgba(255,255,255,1);
+	box-shadow:6px 10px 27px rgba(222,222,222,0.36);
+	position: relative;
+	margin-top: -150px;
+}
+.myOrderNullImgOrder>img{
+	display: block;
+	width: 163px;
+	height: 163px;
+	margin:0 auto;
+}
+.myOrderNullImg>span{
+	line-height: 42px;
+	color: #999;
+}
+
+/*y有订单表格*/
+.myOrderHaveTable{
+	border-collapse: collapse;
+	margin-bottom: 130px;
+	margin-top: 10px;
+}
+
+
+/*单选框自定义  样式*/
+
+.myOrderHaveTable input,.collectionTd input,.myOrderClassInput input{
+	display: none
+}
+.myOrderHaveTable label,.collectionTd label,.myOrderClassInput label{
+	display: inline-block;
+	border: 1px solid #CCC;
+	width: 16px;
+	height:16px;
+	border-radius: 50%
+}
+.myOrderHaveTable input:checked + label,.collectionTd input:checked + label,.myOrderClassInput input:checked + label {
+	border: 6px solid #00a4ff;
+	width: 6px;
+	height: 6px;
+}
+
+
+/*单选框自定义  样式   结束*/
+
+
+.myOrderHaveTable img{
+	display: block;
+	width: 118px;
+	height: 118px;
+	margin: 10px 0;
+}
+.myOrderHaveTable tr{
+	border-bottom: 1px solid  rgba(242,242,242,1);
+}
+.myOrderHaveTable tr:first-of-type,.myOrderHaveTable tr:last-of-type{
+	border-bottom: none;
+}
+.myOrderHaveTable td,.myOrderHaveTable th{
+	text-align: center;
+}
+.myOrderLabel>label{
+	display: inline-block;
+	/*margin-left: -10px;*/
+	margin-right: 4px;
+	font-size: 16px;
+}
+/*删除订单按钮*/
+.myOrderDel{
+	display: inline-block;
+	width:46px;
+	height:26px;
+	line-height: 26px;
+	text-align: center;
+	color: #666;
+	font-size: 14px;
+	border:1px solid rgba(222,222,222,1);
+	cursor: pointer;
+	transition: all .5s;
+}
+.collectDel{
+    width: 64px !important;
+}
+.myOrderDel:hover{
+	color: #FF9600;
+	border: 1px solid #FF9600;
+	transition: all .5s;
+}
+.myOrderMakedate{
+	padding-left: 24px;
+	margin-bottom: 20px;
+}
+.myOrderMakeNum,.myOrderMakedate{
+	color: #666;
+}
+.myOrderMakeSubTitle{
+	color: #666;
+	font-size: 14px;
+}
+.myOrderPrice{
+	color: #FF9600;
+}
+
+/*查看详情,立即支付按钮*/
+
+
+.myOrderBtn{
+	display: inline-block;
+	width:80px !important;
+	height:34px !important;
+	line-height: 34px !important;
+	text-align: center;
+	background:rgba(252,172,47,1);
+	border-radius:4px;
+	margin-right: 8px;
+	color: #fff;
+	font-size: 14px;
+	cursor: pointer;
+	margin: 0 !important;
+}
+
+
+
+/*============================购物车*/
+.myOrderShop{
+	margin-top: 70px;
+}
+#myOrderName{
+	display: inline-block;
+	width: 210px;
+	padding: 10px;
+	height: 26px;
+	line-height: 26px;
+	margin-right: 10px;
+	border:1px solid rgba(222,222,222,1);
+	border-radius: 4px;
+	font-size: 16px;
+}
+.myOrderNullImg{
+	/*display: none;*/
+	width: 161px;
+	margin: 130px auto;
+}
+
+.myOrderNullImgCollectAdd{
+	height: 768px !important;
+}
+.myOrderNullImg>img{
+	display: block;
+	width: 100%;
+}
+.myOrderNullImgCollect{
+	height: 600px;
+}
+.myOrderNullImgCollect>img{
+	width: 161px;
+	height: 161px;
+}
+/*====================我的收藏*/
+.myOrderHaveTableToo{
+	padding-left: 10px;
+}
+
+.myOrderHaveTableHeight{
+	height: 700px;
+}
+
+/*账户信息*/  
+.userCenter,.companyCenter,.passCenter{
+	margin-top: 78px;
+	padding-left: 34px;
+	margin-bottom: 90px;
+}
+.userCenter p ,.companyCenter p,.passCenter p{
+	margin: 0 0 32px 0;
+	height: 51px;
+	border-radius: 4px;
+	position: relative;
+}
+.userCenter p>span,.companyCenter p span,.passCenter p span{
+	display: inline-block;
+	width: 80px;
+	line-height: 46px;
+	margin-right: 10px;
+}
+.userCenter p>input,.companyCenter p>input,.passCenter p>input{
+	display: block;
+	width: 300px;
+	border: 1px solid #AAAAAA;
+	border-radius: 4px;
+	height: 46px;
+	line-height: 46px;
+	padding: 0 10px;
+	font-size: 18px;
+	color: #333;
+	margin-bottom: 36px;
+}
+.userCenterBtn{
+	margin-left: 150px !important;
+}
+/*文本框*/
+#operation {
+	width: 671px;
+	height: 72px;
+	border: 1px solid rgba(222, 222, 222, 1);
+	border-radius: 6px;
+	resize: none;
+	padding: 10px;
+	font-size: 14px;
+	color: #333;
+}
+
+#limitedNum {
+	display: inline-block;
+	position: absolute;
+	right: 72px;
+    top: 46px;
+	color: #999;
+}
+
+#showTextNum,
+#overTextNum {
+	color: #999;
+}
+
+.companyCenterBtn{
+	margin-top: 80px !important;
+}
+
+.passCenterBtn{
+	margin-left: 200px !important;
+}
+
+
+
+/*输入正确的手机号之后显示对勾图片*/
+
+.userNameTrue,
+.userPhoneTrue,
+.userEmailTrue,
+.companyNameTrue,
+.companyUrlTrue,
+.companyAdressTrue,
+.userPassTrue,
+.userPassConfirmTrue,
+.companyaddressTrue,
+.companyaddressTrue,
+.conpanyFaxTrue,
+.companyPhoneTrue,
+.passNameTrue,
+.passNewNameTrue,
+.passNewYesNameTrue，
+.passNameTrue{
+	width: 17px;
+	height: 17px;
+	display: none;
+	position: absolute;
+	left: 430px;
+    top: 16px;
+}
+
+
+/*输入错误显示红色字体*/
+
+#judgeUserName,
+#judgePhone,
+#judgeEmail,
+#judgeCompanyName,
+#judgeUrl,
+#judgeAdress,
+#judgeuserPass,
+#judgeuserPassConfirm,
+#judgeaddress,
+#judgeFax,
+#judgecompanyPhone,
+#judgePassName,
+#judgePassNewName,
+#judgePassNewYesName,
+#judgePassName
+ {
+	display: block;
+	position: absolute;
+	left: 460px;
+	top: 6px;
+	color: #D71E07;
+	font-size: 14px;
+	width: 240px;
+	height: 38px;
+	line-height: 38px;
+}
+
+.del-userName,
+.del-userPhone,
+.del-userEmail,
+.del-companyName,
+.del-companyUrl,
+.del-companyAdress,
+.del-userPass,
+.del-userPassConfirm ,
+.del-companyaddress,
+.del-conpanyFax,
+.del-companyPhone,
+.del-passName,
+.del-passNewName,
+.del-passNewYesName,
+.del-passName
+{
+	width: 17px;
+	height: 17px;
+	display: none;
+	position: absolute;
+	left: 430px;
+    top: 16px;
+}
+
+
+
+/*css3 + jQuery 美化下拉框*/
+.select{
+	width: 300px;
+	height: 26px;
+	padding: 10px;
+	background: #FFFFFF;
+	margin: 0 10px 0 0;
+	position: relative;
+	cursor: pointer;
+}
+.select::after{
+	content: "";
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-left: 1px solid #D0D0D0;
+	border-bottom: 1px solid #D0D0D0;
+	top: 12px;
+	right: 12px;
+	position: absolute;
+	transform: rotate(-46deg);
+	transition: all .3s ease-in;
+}
+.select p{
+	width: 100%;
+	line-height: 26px;
+	font-size: 16px;
+	color: #666666;
+}
+.select ul{
+	width: 100%;
+	display: block;
+	font-size: 16px;
+	background: #FFFFFF;
+	position: absolute;
+	top: 40px;
+	left: 0px;
+	max-height: 0px;
+	overflow: hidden;
+	transition: max-height .3s ease-in;
+}
+.select ul li{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	padding: 0px 15px;
+	list-style: none;
+	color: #666666;
+}
+.select ul li.Selected{
+	background: #ff9600;
+	color: #FFFFFF;
+}
+.select ul li:hover{
+	/*background: #D0D0D0;*/
+}
+@-webkit-keyframes slide-down{
+	0%{transform: scale(1,0);}
+	25%{transform: scale(1,1.2);}
+	50%{transform: scale(1,0.85);}
+	75%{transform: scale(1,1.05);}
+	100%{transform: scale(1,1);}
+}
+
+.select.open ul{
+	z-index: 1111;
+	max-height: 250px;
+	transform-origin: 50% 0;
+	-webkit-animation: slide-down .5s ease-in;
+	transition: max-height .2s ease-in;
+}
+.select.open::after{
+	transform: rotate(134deg);
+	transition: all .3s ease-in;
+	top: 18px;
+}
+
+
+/*  各个下拉框  样式*/
+.selectOrder{
+	width: 138px !important;
+}
+.selectUp{
+	width:180px !important;
+}
+.collectionTitle{
+    padding-left: 0 !important;
+    display: inline-block;
+    white-space:nowrap;;overflow:hidden;
+}
+.collectionTd h4,.collectionTd p{
+    padding-left: 20px;
+    width: 90%;
+
+}
+.myOrderMakeSubStar{
+
+}
+.myOrderMakeSubStar>span>img{
+    display: inline-block;
+    width: 19px;
+    height: 18px;
+    margin: 14px 0 0 0 !important;
+}
+
+
+
+/*删除按钮 弹出  模态框*/
+/*主容器*/
+
+
+.dialogue-mask{
+	position:fixed;                        /*弹出层*/
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background-color:rgba(128,128,128,0.5);
+	display:none;
+	overflow:auto;
+}
+
+
+
+.dialogue-container{
+	position:absolute;
+	width:340px;
+	left:50%;
+	top:40%;
+	transform:translate(-50%,-50%);
+	display:block;
+	z-index:2;
+}
+
+.dialogue-title{
+	font-size:16px;
+	font-weight:bold;
+	line-height:30px;
+	position:relative;
+}
+
+.border-bottom::after{
+	content:"";
+	width:100%;
+	height:1px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	/*background-color:#b9b9b9;*/
+	-webkit-transform:scaleY(0.5);
+
+}
+
+.dialogue-content{
+	position: relative;
+	font-size:14px;
+	line-height:25px;
+	display: block;
+	width: 340px;
+	height: 320px;
+}
+.dialogue-content>img{
+	display: block;
+	width: 340px;
+	height: 320px;
+}
+.dialogue-btn{
+	margin-top:10px;
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	left: 94px;
+	bottom: 36px;
+}
+
+.dialogue-cancel,.dialogue-sure{
+	margin-right:10px;
+	width:100px;
+	height:36px;
+	line-height: 36px;
+	text-align: center;
+	background:rgba(255,150,0,1);
+	border:1px solid rgba(222,222,222,1);
+	border-radius:18px;
+	font-size: 16px;
+	color: #fff;
+	transition: .5s;
+	cursor: pointer;
+}
+.dialogue-cancel:hover,.dialogue-sure:hover{
+	color: #ff9600;
+	background: #fff;
+	transition: .5s;
+}
+.dialogue-cancel{
+	margin-right: 0;
+}
+
+
+@-webkit-keyframes dialogue-in{
+	0% {top:0;}
+	50% {top:40%;}
+	90% {top:37%;}
+	100% {top:40%;}
+}
+
+.animation-dialogue-in{
+	display:block;
+	-webkit-animation:dialogue-in 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+/*隐藏滚动条*/
+.forbid-scroll{
+	height:100%;
+	overflow:hidden;
+}
+
+.fontColorActive{
+	color: #ff9600 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

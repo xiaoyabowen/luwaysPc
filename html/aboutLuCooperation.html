@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<!--[if lte IE 9]>
+		<script src="https://cdn.bootcss.com/html5shiv/3.6/html5shiv.min.js"></script>
+		<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+		<![endif]-->
+
+		<!--[if lte IE 8]>
+	    <div class="text-xs-center m-b-0 bg-blue-grey-100 alert">
+	        <button type="button" class="close" aria-label="Close" data-dismiss="alert">
+	            <span aria-hidden="true">×</span>
+	        </button>
+	        	你正在使用一个 <strong>过时</strong> 的浏览器。请 <a href=https://browsehappy.com/ target=_blank style="color:#FF9600;">升级您的浏览器</a>，以提高您的体验。
+	    </div>
+	    <![endif]-->
+		<!--网页logo-->
+		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/platform.css" />
+		<link rel="stylesheet" type="text/css" href="../css/swiper.css" />
+		<script src="../js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<!--头部-->
+		<!--<div class="bodyHeader">
+			<div class="subBodyHeader cssFlex headerSubCommon">
+				<div class="comNavLogo">
+					<a href="../index.html"><img src="../images/nav_logo.png" id="logoImg" /></a>
+				</div>
+				<div class="bodyNav cssFlex">
+					<p class="cssFlex">
+						<a href="">登陆</a> |
+						<a href="">注册</a>
+					</p>
+					<a href="" class="bodyNavPhone">010-8562 8831</a>
+					<a href="">帮助</a>
+				</div>
+			</div>
+		</div>
+-->
+		<!--平台服务-->
+
+		<!--平台服务  tab-->
+		<div class="platForm">
+			<ul class="cssFlex">
+				<li class="myOrderALLHoverUp">
+					<a class="bussFeacther">
+						业务介绍
+						<div>
+							<p class="bussntro">关于业务</p>
+							<p class="busServer">服务内容</p>
+							<p class="busCooper">合作方式</p>
+						</div>
+					</a>
+
+				</li>
+				<li class="myOrderALLHoverUp">
+					<a class="platFormFeacther">
+						平台特色
+						<div>
+							<p class="platformFeatures">商家平台</p>
+							<p class="platformAPI">标准API</p>
+						</div>
+					</a>
+
+				</li>
+				<li class="myOrderALLHoverUp  platFormTabActiveUp">
+					<a class="platFormTabActive aboutLuWaysClick">关于路途
+						<div>
+							<p class="aboutLuWays">关于路途</p>
+							<p class="aboutLuCooperation fontColorActive">合作伙伴</p>
+							<p class="aboutLuContact">联系我们</p>
+							<p class="aboutLuServer">服务条款</p>
+							<p class="aboutLuUser">用户协议</p>
+							<p class="aboutLuOur">我们的资质</p>
+							<p class="aboutLuBig">大事件</p>
+
+						</div>
+					</a>
+
+				</li>
+				<li class="myOrderALLHoverUp">
+					<a>帮助中心
+						<div>
+							<p class="helpPay">结算周期</p>
+							<p class="helpComput">支付方式</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="headerSubBox">
+
+			<div class="platFormContent headerSubCommon">
+				<p class="featuresText featuresTextBootom">路途B2B分销平台通过API接口向飞猪酒店，去哪儿酒店，艺龙酒店，同程旅行网，携程旅行网等各大OTA平台酒店用户提供超过20万+国际酒店的查询及预订服务； 通过Api接口服务为新美大，马蜂窝，百程网等多家自由行预订平台提供超过3500款境外当地玩乐产品的查询预订及售后服务； 与此同时，多家旅行社也与路途签约建立了合作关系。其中包括北京市中国旅行社有限公司天津分公司、中国旅行社总社（上海）有限公司、金晟国旅、天津市中国旅行社、山东东大建筑工程有限公司、先丰物流（上海）有限公司、贝恩希国际有限公司等等超过700家客户，通过luways.com网站进行自主查询预订服务。
+				</p>
+				<!--合作单位-->
+				<div class="cooperation">
+					<div class="subCooperation">
+						<!-- Swiper -->
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="../images/cooperation_logo.png" alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="../images/indexFooterSlider.jpg" alt="" />
+								</div>
+							</div>
+							<!-- Add Pagination -->
+							<div class="swiper-pagination"></div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+
+		</div>
+		<script src="../js/swiper.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/aboutLuway.js" type="text/javascript" charset="utf-8"></script>
+		<!--自定义滚动条插件-->
+		<script src="../js/scroll.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			var swiper = new Swiper('.swiper-container', {
+				direction: 'horizontal',
+				autoplay: 3000,
+				speed: 300,
+				loop: true,
+				paginationClickable: true,
+				pagination: '.swiper-pagination'
+
+			});
+		</script>
+	</body>
+
+</html>
